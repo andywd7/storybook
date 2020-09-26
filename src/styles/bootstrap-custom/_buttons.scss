@@ -1,0 +1,152 @@
+// stylelint-disable selector-no-qualifying-type
+
+@mixin button-base($padding-y, $padding-x, $border-radius) {
+  @include border-radius($border-radius, 0);
+  @include text-style("body-short-01");
+  margin: 0;
+  padding: $padding-y $padding-x;
+}
+
+@mixin button-variant(
+  $background,
+  $background-hover,
+  $background-active,
+  $color,
+  $ghost: false
+) {
+  @if $ghost {
+    border-color: $background;
+  }
+  @else {
+    background-color: $background;
+  }
+  color: $color;
+
+  &:hover,
+  &.#{$prefix}-btn--pressed {
+    background-color: $background-hover;
+  }
+
+  &:focus {
+    @include focus("outside");
+  }
+
+  &:active {
+    background-color: $background-active;
+  }
+}
+
+//
+// Base styles
+//
+
+.#{$prefix}-btn,
+.btn {
+  @include button-base($btn-padding-y, $btn-padding-x, $btn-border-radius);
+  @include transition($btn-transition);
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: $text-04;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $btn-font-family;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    @include focus(inside);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus,
+  &:disabled:active {
+    background-color: $disabled-02;
+    border-color: $disabled-02;
+    color: $disabled-03;
+    cursor: not-allowed;
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.#{$prefix}-btn.disabled,
+a.btn.disabled,
+fieldset:disabled a.#{$prefix}-btn,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Button variants
+//
+
+.#{$prefix}-btn {
+  @include button-variant($interactive-02, $hover-secondary, $active-secondary, $text-03, true);
+}
+
+.#{$prefix}-btn--primary,
+.btn-primary {
+  @include button-variant($interactive-01, $hover-primary, $active-primary, $text-04);
+}
+
+.#{$prefix}-btn--secondary,
+.btn-secondary {
+  @include button-variant($interactive-02, $hover-secondary, $active-secondary, $text-04);
+}
+
+.#{$prefix}-btn--standard {
+  @include button-variant(transparent, $hover-tertiary, $active-tertiary, $interactive-03);
+  border-color: $interactive-03;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.#{$prefix}-btn--pressed {
+    color: $inverse-01;
+  }
+
+  &:hover,
+  &.#{$prefix}-btn--pressed {
+    border-color: $hover-tertiary;
+  }
+
+  &:focus {
+    background-color: $interactive-03;
+    border-color: $inverse-01;
+  }
+
+  &:active {
+    border-color: $active-tertiary;
+  }
+}
+
+.#{$prefix}-btn--danger,
+.btn-danger {
+  @include button-variant($danger, $hover-danger, $active-danger, $text-04);
+}
+
+.#{$prefix}-btn--ghost {
+  @include button-variant(transparent, $hover-ui, $active-ui, $link-01);
+
+  &:hover,
+  &:active,
+  &.#{$prefix}-btn--pressed {
+    color: $hover-primary-text;
+  }
+}
+
+
+//
+// Button Sizes
+//
+
+.#{$prefix}-btn--sm,
+.btn-sm {
+  @include button-base($btn-padding-y-sm, $btn-padding-x-sm, $btn-border-radius-sm);
+}

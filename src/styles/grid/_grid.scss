@@ -1,0 +1,38 @@
+@import "mixins/grid-framework";
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+// Single container class with breakpoint max-widths
+.#{$prefix}-container {
+  @include make-container();
+}
+
+
+// Row
+//
+// Rows contain your columns.
+
+.#{$prefix}-row {
+  @include make-row();
+}
+
+// Remove the negative margin from default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.#{$prefix}-no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+
+  > .#{$prefix}-col,
+  > [class*="#{$prefix}-col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+@include make-grid-columns();

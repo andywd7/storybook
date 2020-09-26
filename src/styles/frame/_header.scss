@@ -1,0 +1,303 @@
+// @import "../../globals/scss/functions";
+// @import "../../globals/scss/helper-classes";
+// @import "../../globals/scss/helper-mixins";
+// @import "../../globals/scss/layout";
+// @import "../../globals/scss/vars";
+// @import "../../globals/scss/typography";
+// @import "theme";
+// @import "functions";
+
+/// UI shell header
+/// @access private
+/// @group ui-shell
+.#{$prefix}-header {
+  align-items: center;
+  background-color: $frame-header-bg-01;
+  border-bottom: 1px solid $frame-header-border-01;
+  display: flex;
+  height: mini-units(6);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: z-index("header");
+}
+
+.#{$prefix}-header__action {
+  @include button-reset();
+  border: nt-rem(2px) solid transparent;
+  height: mini-units(6);
+  // transition: background-color $duration--fast-02, border-color $duration--fast-02;
+  width: mini-units(6);
+}
+
+.#{$prefix}-header__action > svg.#{$prefix}-navigation-menu-panel-collapse-icon,
+.#{$prefix}-header__action--active > svg.#{$prefix}-navigation-menu-panel-expand-icon {
+  display: none;
+}
+
+.#{$prefix}-header__action--active > svg.#{$prefix}-navigation-menu-panel-collapse-icon {
+  display: inline;
+}
+
+.#{$prefix}-header__action:hover {
+  background-color: $frame-header-bg-04;
+}
+
+.#{$prefix}-header__action--active {
+  border-bottom: 1px solid $frame-header-bg-01;
+  border-left: 1px solid $frame-header-border-01;
+  border-right: 1px solid $frame-header-border-01;
+}
+
+.#{$prefix}-header__action:focus {
+  border-color: $frame-header-focus;
+  outline: none;
+}
+
+.#{$prefix}-header__action:active {
+  background-color: $frame-header-bg-03;
+}
+
+.#{$prefix}-header__action > svg {
+  fill: $frame-header-icon-02;
+}
+
+.#{$prefix}-header__menu-trigger {
+  margin-right: nt-rem(-8px);
+}
+
+.#{$prefix}-header__menu-trigger > svg {
+  fill: $frame-header-icon-01;
+}
+
+.#{$prefix}-header__menu-trigger:hover {
+  fill: $frame-header-bg-02;
+}
+
+.#{$prefix}-header__menu-toggle {
+  display: block;
+}
+
+.#{$prefix}-header__menu-toggle__hidden {
+  @include media-breakpoint-up("lg") {
+    display: none;
+  }
+}
+
+//--------------------------------------------------------------------------
+// Header - Name
+//--------------------------------------------------------------------------
+a.#{$prefix}-header__name {
+  align-items: center;
+  border: 2px solid transparent;
+  display: flex;
+  font-size: $font-size-03;
+  font-weight: $font-weight-normal;
+  height: 100%;
+  // letter-spacing: 0.1px;
+  line-height: $line-height-03;
+  outline: none;
+  padding: 0 nt-rem($spacing_07) 0 nt-rem($spacing_05);
+  // text-decoration: none;
+  // transition: border-color $duration--fast-02;
+  user-select: none;
+}
+
+a.#{$prefix}-header__name:focus {
+  border-color: $frame-header-focus;
+}
+
+.#{$prefix}-header__name--prefix {
+  font-weight: $font-weight-regular;
+}
+
+a.#{$prefix}-header__name,
+a.#{$prefix}-header__name:hover {
+  color: $frame-header-text-01;
+}
+
+//--------------------------------------------------------------------------
+// Header - Navigation
+//--------------------------------------------------------------------------
+// .#{$prefix}-header__nav {
+//   display: none;
+//   height: 100%;
+//   padding-left: nt-rem($spacing_05);
+//   position: relative;
+
+//   @include media-breakpoint-up("lg") {
+//     display: block;
+//   }
+
+//   &::before {
+//     background-color: $frame-header-border-01;
+//     content: "";
+//     display: block;
+//     height: nt-rem($spacing_06);
+//     left: 0;
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     width: nt-rem(1px);
+//   }
+// }
+
+// .#{$prefix}-header__menu-bar {
+//   display: flex;
+//   height: 100%;
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// a.#{$prefix}-header__menu-item {
+//   align-items: center;
+//   // Used for focus styles
+//   border: 2px solid transparent;
+//   color: $frame-header-text-02;
+//   display: flex;
+//   // Text styles
+//   font-size: $font-size-02;
+//   font-weight: $font-weight-regular;
+//   // Used for links that are directly in the menubar to span the full height
+//   height: 100%;
+//   letter-spacing: 0;
+//   line-height: $line-height-02;
+//   padding: 0 nt-rem($spacing-05);
+//   // Reset link styles and make sure the text isn't selectable
+//   text-decoration: none;
+//   // transition: background-color $duration--fast-02,
+//   //   border-color $duration--fast-02, color $duration--fast-02;
+//   user-select: none;
+// }
+
+// a.#{$prefix}-header__menu-item:hover {
+//   background-color: $frame-header-bg-02;
+//   color: $frame-header-text-01;
+// }
+
+// .#{$prefix}-header__action:active,
+// a.#{$prefix}-header__menu-item:active {
+//   background-color: $frame-header-bg-03;
+//   color: $frame-header-text-01;
+// }
+
+// a.#{$prefix}-header__menu-item:focus {
+//   border-color: $frame-header-focus;
+//   color: $frame-header-text-01;
+//   outline: none;
+// }
+
+// a.#{$prefix}-header__menu-item:hover > svg,
+// a.#{$prefix}-header__menu-item:active > svg,
+// a.#{$prefix}-header__menu-item:focus > svg {
+//   fill: $frame-header-icon-01;
+// }
+
+// .#{$prefix}-header__submenu {
+//   position: relative;
+// }
+
+// .#{$prefix}-header__menu-title[aria-haspopup="true"] {
+//   position: relative;
+// }
+
+// .#{$prefix}-header__menu-title[aria-expanded="true"] {
+//   background-color: $frame-header-bg-06;
+//   color: $frame-header-focus;
+//   // Note: needs to be higher than menu. Adding 1 here instead of moving to
+//   // the next level.
+//   z-index: #{z-index("header") + 1};
+// }
+
+// .#{$prefix}-header__menu-title[aria-expanded="true"] > .#{$prefix}-header__menu-arrow {
+//   transform: rotate(180deg);
+// }
+
+// .#{$prefix}-header__menu {
+//   display: none;
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .#{$prefix}-header__menu-title[aria-expanded="true"] + .#{$prefix}-header__menu {
+//   background-color: $frame-header-bg-06;
+//   bottom: 0;
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+//   display: flex;
+//   flex-direction: column;
+//   left: 0;
+//   position: absolute;
+//   transform: translateY(100%);
+//   width: mini-units(25);
+//   z-index: z-index("header");
+// }
+
+// .#{$prefix}-header__menu-title[aria-expanded="true"] + .#{$prefix}-header__menu
+// .#{$prefix}-header__menu-item:hover {
+//   background-color: $frame-header-bg-04;
+// }
+
+// .#{$prefix}-header__menu-title[aria-expanded="true"] + .#{$prefix}-header__menu
+// .#{$prefix}-header__menu-item:active {
+//   background-color: $frame-header-bg-03;
+// }
+
+// .#{$prefix}-header__menu .#{$prefix}-header__menu-item {
+//   height: mini-units(6);
+// }
+
+// .#{$prefix}-header__menu .#{$prefix}-header__menu-item:hover {
+//   background-color: $frame-header-bg-06;
+//   color: $frame-header-text-01;
+// }
+
+// .#{$prefix}-header__menu-arrow {
+//   fill: $frame-header-icon-03;
+//   margin-left: mini-units(1);
+//   // transition: transform $duration--fast-02, fill $duration--fast-02;
+// }
+
+//--------------------------------------------------------------------------
+// Header - Global
+//--------------------------------------------------------------------------
+.#{$prefix}-header__global {
+  display: flex;
+  flex: 1 1 0%;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+//--------------------------------------------------------------------------
+// Header - Skip to content
+//--------------------------------------------------------------------------
+.#{$prefix}-skip-to-content {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  visibility: inherit;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.#{$prefix}-skip-to-content:focus {
+  align-items: center;
+  background-color: $frame-header-bg-01;
+  border: 4px solid $blue-60;
+  clip: auto;
+  color: $frame-header-text-01;
+  display: flex;
+  height: 3rem;
+  left: 0;
+  outline: none;
+  padding: 0 nt-rem($spacing-05);
+  top: 0;
+  width: auto;
+  z-index: 9999;
+}

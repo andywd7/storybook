@@ -1,0 +1,155 @@
+extends:
+  - 'stylelint-config-recommended'
+plugins:
+  - 'stylelint-scss'
+  - 'stylelint-order'
+ignoreFiles:
+  - './src/assets/**'
+  - './tests/**'
+  # - './dist/**'
+rules:
+  # Disallow "@extend" in scss.
+  # http://csswizardry.com/2016/02/mixins-better-for-performance/
+  # http://vanseodesign.com/css/sass-mixin-or-extend/
+  # Besides performance, @extend actually *changes* the selector precedence by creating a compound
+  # selector, which can lead to ambiguous results.
+  # at-rule-blacklist:
+    # - extend
+  at-rule-no-unknown: null
+  at-rule-no-vendor-prefix: true
+  block-closing-brace-newline-after: always
+  block-closing-brace-newline-before: always
+  block-opening-brace-newline-after: always
+    # - 'ignoreAtRules':
+    #   - 'if'
+    #   - 'else'
+  block-opening-brace-space-before: always
+  color-hex-case: lower
+  color-hex-length: short
+  color-named: never
+  # custom-property-pattern: 'nt-.+'
+  declaration-bang-space-after: never
+  declaration-bang-space-before: always
+  declaration-block-no-redundant-longhand-properties: true
+  declaration-block-semicolon-newline-after: always
+  declaration-block-semicolon-space-before: never
+  # declaration-block-single-line-max-declarations: 0
+  declaration-block-trailing-semicolon: always
+  declaration-colon-space-after: always-single-line
+  declaration-colon-space-before: never
+  declaration-no-important: true
+  declaration-property-value-disallowed-list:
+    - '/^border/': ['none']
+  font-family-name-quotes: always-where-recommended
+  # Names are more semantic than numbers
+  font-weight-notation: named-where-possible
+  function-disallowed-list: rgb
+  function-comma-space-after: always-single-line
+  function-comma-space-before: never
+  function-name-case: lower
+  function-parentheses-space-inside: never-single-line
+  function-url-quotes: always
+  indentation: 2
+  length-zero-no-unit: true
+  max-nesting-depth:
+    - 2
+    - 'ignoreAtRules':
+      - 'if'
+      - 'each'
+      - 'else'
+      - 'include'
+      - 'media'
+      - 'mixin'
+      - 'supports'
+  media-feature-name-case: lower
+  media-feature-name-no-vendor-prefix: true
+  media-feature-parentheses-space-inside: never
+  no-descending-specificity: null
+  no-missing-end-of-source-newline: true
+  number-leading-zero: always
+  # number-max-precision: 4
+  number-no-trailing-zeros: true
+  order/order:
+    - - custom-properties
+      - dollar-variables
+      - type: at-rule
+        name: include
+        hasBlock: false
+      - declarations
+      - type: at-rule
+        name: media
+      - rules
+    - unspecified: 'ignore'
+  order/properties-alphabetical-order: true
+  property-case: lower
+  property-no-vendor-prefix: true
+  rule-empty-line-before:
+    - always
+    - except:
+        - first-nested
+      ignore:
+        - after-comment
+        - inside-block
+  scss/at-function-pattern:
+    - ^([a-z0-9]+[-a-z0-9]+)?$
+    - message: Expected function to be kebab-case (scss/at-function-pattern)
+  scss/at-else-closing-brace-newline-after: always-last-in-chain
+  scss/at-else-closing-brace-space-after: always-intermediate
+  scss/at-else-empty-line-before: never
+  scss/at-if-closing-brace-newline-after: always-last-in-chain
+  scss/at-if-closing-brace-space-after: always-intermediate
+  # scss/at-import-no-partial-leading-underscore: true
+  scss/at-mixin-pattern:
+    - ^([a-z0-9]+[-a-z0-9]+)?$
+    - message: Expected mixin to be kebab-case (scss/at-mixin-pattern)
+  scss/at-rule-no-unknown: true
+  scss/dollar-variable-colon-space-after: always-single-line
+  scss/dollar-variable-colon-space-before: never
+  scss/dollar-variable-pattern:
+    # - ^nt-|nds-([a-z0-9]+[-a-z0-9]+)?$
+    - ^([a-z0-9]+[-a-z0-9]+)?$
+    - message: Expected $ variable to be kebab-case (scss/dollar-variable-pattern)
+      ignore:
+        - local
+  scss/operator-no-newline-after: true
+  scss/operator-no-unspaced: true
+  # Breaks stylelint-webpack-plugin
+  # https://github.com/kristerkari/stylelint-scss/issues/266
+  # scss/selector-no-redundant-nesting-selector: true
+  selector-attribute-brackets-space-inside: never
+  selector-attribute-operator-space-after: never
+  selector-attribute-operator-space-before: never
+  selector-attribute-quotes: always
+  selector-class-pattern:
+    - ^([a-z][a-z0-9\-]*)(__[a-z0-9][a-z0-9\-]*)?(--[a-z0-9][a-z0-9\-]*)*$
+    - message: Expected selector to be kebab-case (selector-class-pattern)
+    - resolveNestedSelectors: true
+  selector-combinator-space-after: always
+  selector-combinator-space-before: always
+  selector-list-comma-newline-after: always
+  selector-max-compound-selectors: 3
+  selector-max-id: 0
+  selector-max-type:
+    - 2
+    - ignore:
+        - compounded
+        - descendant
+        - child
+  # Styles for components should never need the universal selector.
+  selector-max-universal: 0
+  selector-no-qualifying-type:
+    - true
+    - ignore:
+        - attribute
+  selector-no-vendor-prefix: true
+  selector-pseudo-class-case: lower
+  selector-pseudo-element-case: lower
+  selector-pseudo-element-colon-notation: double
+  selector-type-case: lower
+  shorthand-property-no-redundant-values: true
+  # Double-quotes are our convention throughout our codebase within (S)CSS. They also reflect how
+  # attribute strings are normally quoted within the DOM.
+  string-quotes: double
+  time-min-milliseconds: 100
+  unit-case: lower
+  value-no-vendor-prefix: true

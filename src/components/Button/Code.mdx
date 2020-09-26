@@ -1,0 +1,42 @@
+import { Canvas, Story, ArgsTable } from '@storybook/addon-docs/blocks'
+import IiButton from './Button.vue'
+
+# Overview
+
+export const SOURCE_REGEX = /`(?:[^`])*`$/g
+
+<Canvas withToolbar>
+    <Story id="components-button--standard" />
+    <Story id="components-button--primary" />
+    <Story id="components-button--secondary" />
+    <Story id="components-button--danger" />
+    <Story id="components-button--ghost" />
+</Canvas>
+
+<ArgsTable of={IiButton} />
+
+### Standard
+<Canvas>
+    <Story id="components-button--standard" />
+</Canvas>
+
+### Secondary
+<Canvas>
+    <Story id="components-button--secondary" />
+</Canvas>
+
+### Primary
+<Canvas>
+    <Story id="components-button--primary" />
+</Canvas>
+
+### Danger
+<Canvas>
+    <Story id="components-button--danger" />
+</Canvas>
+
+### Ghost
+<Canvas>
+    <Story id="components-button--ghost" />
+</Canvas>
+

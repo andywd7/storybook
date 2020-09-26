@@ -1,0 +1,5 @@
+{
+  "trailingComma": "none",
+  "semi": false,
+  "jsx-bracket-same-line": true
+}

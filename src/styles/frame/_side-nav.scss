@@ -1,0 +1,639 @@
+/// Helper to add in text overflow styles to a particular node. Useful if we
+/// don't want to have display-inline: block from the text helper classes
+/// @access private
+/// @group ui-frame
+/// @example
+///   .my-custom-selector {
+///     @include text-overflow();
+///   }
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/// Helper for handling selectors for the expansion state of the side-nav.
+/// This helper makes it easier to write code for children that need to respond
+/// to whether the side-nav is open, or closed. For convenience, we also
+/// optionally set properties for opacity and visibility to help with the
+/// transition animation.
+/// @access private
+/// @group ui-frame
+/// @param {Bool} $opacity [false]
+/// @param {Bool} $visibility [false]
+/// @content
+@mixin expanded($opacity: false, $visibility: false) {
+
+  .#{$prefix}-side-nav:hover &,
+  // Include the fixed variant here so components can render in both expandable
+  // and fixed side navs
+  .#{$prefix}-side-nav--fixed &,
+  .#{$prefix}-side-nav--expanded & {
+    @if $visibility == true {
+      visibility: inherit;
+    }
+    @if $opacity == true {
+      opacity: 1;
+    }
+    @content;
+  }
+  @if $opacity == true {
+    opacity: 0;
+  }
+
+  @if $visibility == true {
+    visibility: hidden;
+  }
+}
+
+/// UI frame side nav
+/// @access private
+/// @group ui-frame
+//----------------------------------------------------------------------------
+// Side-nav > Panel
+//----------------------------------------------------------------------------.
+.#{$prefix}-side-nav {
+  background-color: $frame-side-nav-bg-01;
+  bottom: 0;
+  color: $frame-side-nav-text-01;
+  left: 0;
+  max-width: mini-units(32);
+  // Useful to toggle this property to see what's going on when not expanded
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  // TODO: sync with motion work
+  transition: width 0.11s cubic-bezier(0.2, 0, 1, 0.9);
+  width: mini-units(6);
+  will-change: width;
+  z-index: z-index("header");
+}
+
+.#{$prefix}-side-nav--ux {
+  top: $spacing-09;
+  width: mini-units(32);
+
+  @include media-breakpoint-down("lg") {
+    width: 0;
+  }
+}
+
+//----------------------------------------------------------------------------
+// Rail
+//---------------------------------------------------------------------------
+// Used for rendering the actual side rail. There are two states that we have
+// to style for, namely for when the rail is collapsed and expanded. When
+// collapsed, the rail is intended to expand on mouse over. When expanded, it
+// should have the same dimensions as when expanded on mouse over
+
+.#{$prefix}-side-nav--rail {
+  width: mini-units(6);
+}
+
+.#{$prefix}-side-nav--hidden {
+  width: 0;
+}
+
+.#{$prefix}-side-nav.bx--side-nav--rail:not(.#{$prefix}-side-nav--fixed):hover,
+.#{$prefix}-side-nav--expanded {
+  width: mini-units(32);
+}
+
+.#{$prefix}-side-nav__overlay {
+  background-color: transparent;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  top: nt-rem(48px);
+  // transition: opacity $transition--expansion $carbon--standard-easing,
+  //   background-color $transition--expansion $carbon--standard-easing;
+  width: 0;
+}
+
+.#{$prefix}-side-nav__overlay-active {
+  @include media-breakpoint-down("lg") {
+    background-color: $overlay-01;
+    height: 100vh;
+    opacity: 1;
+    // transition: opacity $transition--expansion $carbon--standard-easing,
+    //   background-color $transition--expansion $carbon--standard-easing;
+    width: 100%;
+  }
+}
+
+// When used alongside the header, we update the `top` positioning so that we
+// can fit both widgets on the same page without overlapping.
+.#{$prefix}-header ~ .#{$prefix}-side-nav {
+  height: calc(100% - 48px);
+  top: mini-units(6);
+}
+
+.#{$prefix}-side-nav--fixed {
+  width: mini-units(32);
+}
+
+.#{$prefix}-side-nav--collapsed {
+  transform: translateX(mini-units(-32));
+  width: mini-units(32);
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Navigation
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__navigation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Navigation > Header
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__header {
+  border-bottom: 1px solid $frame-side-nav-bg-02;
+  display: flex;
+  height: mini-units(6);
+  max-width: 100%;
+  width: 100%;
+
+  @include expanded() {
+    height: auto;
+  }
+}
+
+.#{$prefix}-side-nav--ux .#{$prefix}-side-nav__header {
+  height: auto;
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Navigation > Header > Details
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__details {
+
+  @include expanded($opacity: true, $visibility: true);
+  display: flex;
+  // Necessary for text truncation in title
+  // https://css-tricks.com/flexbox-truncated-text/#article-header-id-3
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding-right: mini-units(2);
+}
+
+.#{$prefix}-side-nav--ux .#{$prefix}-side-nav__details {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.#{$prefix}-side-nav__title {
+  @include text-overflow();
+
+  // TODO: sync with type styles
+  font-size: nt-rem(14px);
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  margin-top: mini-units(2);
+  user-select: none;
+}
+
+// Sync up between our title and select field to get position logic for
+// text
+.#{$prefix}-side-nav__title,
+.#{$prefix}-side-nav__select {
+  padding-left: mini-units(1);
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Navigation > Header > Switcher
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__switcher {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.#{$prefix}-side-nav__switcher-chevron {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  fill: $frame-side-nav-icon-01;
+  position: absolute;
+  right: mini-units(1);
+  top: 0;
+}
+
+.#{$prefix}-side-nav__select {
+  @include focus("reset");
+  appearance: none;
+  background-color: $frame-header-bg-01;
+  border: 0;
+  border-radius: 0;
+  color: $frame-header-text-01;
+  cursor: pointer;
+  flex: 1 1 0%;
+  font-size: nt-rem(12px);
+  height: 100%;
+  height: mini-units(4);
+  // Flex bug, used to have the select node respect the width if a child has a
+  // value that is longer than the width of the select
+  min-width: 0;
+  // Buffer the right hand side of select so text doesn't overlay the chevron
+  padding-right: mini-units(4);
+  // transition: outline $duration--fast-02;
+}
+
+.#{$prefix}-side-nav__select:focus {
+  @include focus("outline");
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Navigation > Footer
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__footer {
+  background-color: $frame-side-nav-bg-01;
+  flex: 0 0 nt-rem(48px);
+  width: 100%;
+}
+
+.#{$prefix}-side-nav__toggle {
+  @include focus("reset");
+  @include button-reset($width: true);
+  height: 100%;
+  padding-left: mini-units(2);
+  text-align: left;
+  // transition: outline $duration--fast-02;
+}
+
+.#{$prefix}-side-nav__toggle:focus {
+  @include focus("outline");
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Navigation > Item(s)
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__items {
+  flex: 1 1 0%;
+  list-style: none;
+  overflow: hidden;
+  padding: 1rem 0 0;
+
+  @include expanded() {
+    overflow-y: auto;
+  }
+}
+
+.#{$prefix}-side-nav--ux .#{$prefix}-side-nav__items {
+  overflow-y: auto;
+}
+
+// Force all of our side navigation items to be the same dimensions. When our
+// menu expands, we can undo the forced dimensions.
+.#{$prefix}-side-nav__item {
+  height: mini-units(6);
+  overflow: hidden;
+  width: mini-units(6);
+
+  @include expanded() {
+    height: auto;
+    width: auto;
+  }
+}
+
+.#{$prefix}-side-nav--ux .#{$prefix}-side-nav__item {
+  height: auto;
+  width: auto;
+}
+
+.#{$prefix}-side-nav__item:not(.#{$prefix}-side-nav__item--active):hover
+.#{$prefix}-side-nav__item:not(.#{$prefix}-side-nav__item--active) > .#{$prefix}-side-nav__submenu:hover,
+.#{$prefix}-side-nav__item:not(.#{$prefix}-side-nav__item--active) > .#{$prefix}-side-nav__link:hover,
+.#{$prefix}-side-nav__menu
+a.#{$prefix}-side-nav__link:not(.#{$prefix}-side-nav__link--current):not([aria-current="page"]):hover,
+.#{$prefix}-side-nav a.#{$prefix}-header__menu-item:hover,
+.#{$prefix}-side-nav
+.#{$prefix}-header__menu-title[aria-expanded="true"]:hover {
+  // TODO: sync color
+  background-color: $frame-side-nav-bg-04;
+  color: $grey-100;
+}
+
+.#{$prefix}-side-nav__item:not(.#{$prefix}-side-nav__item--active) > .#{$prefix}-side-nav__link:hover > span,
+.#{$prefix}-side-nav__item:not(.#{$prefix}-side-nav__item--active)
+.#{$prefix}-side-nav__menu-item > .#{$prefix}-side-nav__link:hover > span {
+  color: $grey-100;
+}
+
+.#{$prefix}-side-nav__item--large {
+  height: mini-units(6);
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Navigation > {Menu,Submenu}
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__submenu[aria-haspopup="true"] {
+  @include button-reset($width: true);
+  @include text-style("heading-01");
+  @include focus("reset");
+  align-items: center;
+  color: $frame-side-nav-text-01;
+  display: flex;
+  height: mini-units(4);
+  padding: 0 mini-units(2);
+  // transition: color $duration--fast-02, background-color $duration--fast-02,
+  //   outline $duration--fast-02;
+  user-select: none;
+}
+
+.#{$prefix}-side-nav__submenu:hover {
+  background-color: $frame-side-nav-bg-04;
+  color: $grey-100;
+}
+
+.#{$prefix}-side-nav__submenu:focus {
+  @include focus("outline");
+}
+
+.#{$prefix}-side-nav__submenu-title {
+  @include text-overflow();
+  text-align: left;
+}
+
+.#{$prefix}-side-nav__icon.#{$prefix}-side-nav__submenu-chevron {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.#{$prefix}-side-nav__submenu-chevron > svg {
+  height: nt-rem(16px);
+  // transition: transform $duration--fast-02;
+  width: nt-rem(16px);
+}
+
+.#{$prefix}-side-nav__submenu[aria-expanded="true"]
+.#{$prefix}-side-nav__submenu-chevron > svg {
+  transform: rotate(180deg);
+}
+
+.#{$prefix}-side-nav__item--large .#{$prefix}-side-nav__submenu {
+  height: mini-units(6);
+}
+
+.#{$prefix}-side-nav__item--active .#{$prefix}-side-nav__submenu:hover {
+  background-color: $frame-side-nav-bg-04;
+  color: $grey-100;
+}
+
+.#{$prefix}-side-nav__item--active
+.#{$prefix}-side-nav__submenu[aria-expanded="false"] {
+  background-color: $frame-side-nav-bg-04;
+  color: $grey-100;
+  position: relative;
+  &::before {
+    background-color: $frame-side-nav-accent-01;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+  }
+}
+
+.#{$prefix}-side-nav__item--active .#{$prefix}-side-nav__submenu-title {
+  color: $grey-100;
+  font-weight: 600;
+}
+
+.#{$prefix}-side-nav__menu {
+  display: block;
+  list-style: none;
+  max-height: 0;
+  padding-left: 0;
+  visibility: hidden;
+}
+
+.#{$prefix}-side-nav__submenu[aria-expanded="true"] + .#{$prefix}-side-nav__menu {
+  max-height: nt-rem(1500px);
+  visibility: inherit;
+}
+
+.#{$prefix}-side-nav__menu a.#{$prefix}-side-nav__link {
+  font-weight: $font-weight-normal;
+  height: mini-units(4);
+  min-height: mini-units(4);
+  padding-left: mini-units(4);
+}
+
+.#{$prefix}-side-nav__item.#{$prefix}-side-nav__item--icon
+a.#{$prefix}-side-nav__link {
+  padding-left: mini-units(9);
+}
+
+.#{$prefix}-side-nav__menu a.#{$prefix}-side-nav__link--current,
+.#{$prefix}-side-nav__menu a.#{$prefix}-side-nav__link[aria-current="page"],
+a.#{$prefix}-side-nav__link--current {
+  background-color: $grey-20;
+
+  > span {
+    color: $grey-100;
+    font-weight: 600;
+  }
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Link
+//----------------------------------------------------------------------------
+a.#{$prefix}-side-nav__link,
+.#{$prefix}-side-nav a.#{$prefix}-header__menu-item,
+.#{$prefix}-side-nav
+.#{$prefix}-header__menu-title[aria-expanded="true"] + .#{$prefix}-header__menu {
+  @include focus("reset");
+  @include text-style("heading-01");
+  align-items: center;
+  display: flex;
+  min-height: mini-units(4);
+  padding: 0 mini-units(2);
+  position: relative;
+  text-decoration: none;
+  // transition: color $duration--fast-02, background-color $duration--fast-02,
+  //   outline $duration--fast-02;
+}
+
+.#{$prefix}-side-nav__item--large a.#{$prefix}-side-nav__link {
+  height: mini-units(6);
+}
+
+a.#{$prefix}-side-nav__link > .#{$prefix}-side-nav__link-text,
+.#{$prefix}-side-nav
+a.#{$prefix}-header__menu-item
+.#{$prefix}-text-truncate-end {
+  @include text-overflow();
+  color: $frame-side-nav-text-01;
+  font-size: nt-rem(14px);
+  letter-spacing: 0.1px;
+  line-height: nt-rem(20px);
+  user-select: none;
+}
+
+a.#{$prefix}-side-nav__link:focus,
+.#{$prefix}-side-nav a.#{$prefix}-header__menu-item:focus {
+  @include focus("outline");
+}
+
+a.#{$prefix}-side-nav__link[aria-current="page"],
+a.#{$prefix}-side-nav__link--current {
+  background-color: $frame-side-nav-bg-04;
+  font-weight: 600;
+}
+
+a.#{$prefix}-side-nav__link[aria-current="page"]
+.#{$prefix}-side-nav__link-text,
+a.#{$prefix}-side-nav__link--current .#{$prefix}-side-nav__link-text {
+  color: $grey-100;
+}
+
+a.#{$prefix}-side-nav__link[aria-current="page"]::before,
+a.#{$prefix}-side-nav__link--current::before {
+  background-color: $frame-side-nav-accent-01;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 4px;
+}
+
+//----------------------------------------------------------------------------
+// Side-nav > Icons
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav__icon {
+  align-items: center;
+  display: flex;
+  // Helpful in flex containers so the icon does not have less than the
+  // expected width
+  flex: 0 0 mini-units(2);
+  justify-content: center;
+}
+
+.#{$prefix}-side-nav__icon:not(.#{$prefix}-side-nav__submenu-chevron) {
+  margin-right: mini-units(3);
+}
+
+.#{$prefix}-side-nav__icon > svg {
+  fill: $frame-side-nav-icon-01;
+  height: mini-units(2);
+  width: mini-units(2);
+}
+
+.#{$prefix}-side-nav__icon > svg.#{$prefix}-side-nav-collapse-icon {
+  display: none;
+}
+
+.#{$prefix}-side-nav--expanded
+.#{$prefix}-side-nav__icon > svg.#{$prefix}-side-nav-expand-icon {
+  display: none;
+}
+
+.#{$prefix}-side-nav--expanded
+.#{$prefix}-side-nav__icon > svg.#{$prefix}-side-nav-collapse-icon {
+  display: block;
+}
+
+//----------------------------------------------------------------------------
+// Variants - Fixed
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav--fixed a.#{$prefix}-side-nav__link,
+.#{$prefix}-side-nav--fixed
+.#{$prefix}-side-nav__submenu[aria-haspopup="true"] {
+  padding-left: mini-units(2);
+}
+
+.#{$prefix}-side-nav--fixed
+.#{$prefix}-side-nav__menu
+a.#{$prefix}-side-nav__link {
+  padding-left: mini-units(4);
+}
+
+//----------------------------------------------------------------------------
+// Variants - Header Nav Links in Side Nav
+//----------------------------------------------------------------------------
+.#{$prefix}-side-nav .#{$prefix}-header__nav {
+  @include media-breakpoint-down("lg") {
+    display: block;
+  }
+}
+
+.#{$prefix}-side-nav__header-navigation {
+  display: none;
+
+  @include media-breakpoint-down("lg") {
+    display: block;
+    margin-bottom: nt-rem(32px);
+    position: relative;
+  }
+}
+
+.#{$prefix}-side-nav__header-divider::after {
+  background: $grey-20;
+  bottom: nt-rem(-16px);
+  content: "";
+  height: nt-rem(1px);
+  left: nt-rem(16px);
+  position: absolute;
+  width: calc(100% - 32px);
+}
+
+//header menu items overrides
+.#{$prefix}-side-nav a.#{$prefix}-header__menu-item {
+  color: $frame-side-nav-text-01;
+  justify-content: space-between;
+  white-space: nowrap;
+
+  &[aria-expanded="true"] {
+    background-color: transparent;
+  }
+}
+
+/* stylelint-disable selector-max-compound-selectors */
+.#{$prefix}-side-nav
+.#{$prefix}-header__menu-title[aria-expanded="true"] + .#{$prefix}-header__menu {
+  background-color: transparent;
+  bottom: inherit;
+  box-shadow: none;
+  padding: 0;
+  transform: none;
+  width: 100%;
+
+  & li {
+    width: 100%;
+  }
+
+  a.#{$prefix}-header__menu-item {
+    font-weight: $font-weight-normal;
+    padding-left: 4.25rem;
+  }
+
+  a.#{$prefix}-header__menu-item:hover {
+    background-color: $frame-side-nav-bg-04;
+    color: $grey-100;
+  }
+}
+/* stylelint-enable selector-max-compound-selectors */
+
+.#{$prefix}-side-nav
+.#{$prefix}-header__menu
+a.#{$prefix}-header__menu-item {
+  height: inherit;
+}
+
+.#{$prefix}-side-nav
+a.#{$prefix}-header__menu-item:hover
+.#{$prefix}-header__menu-arrow,
+.#{$prefix}-side-nav
+a.#{$prefix}-header__menu-item:focus
+.#{$prefix}-header__menu-arrow,
+.#{$prefix}-side-nav .#{$prefix}-header__menu-arrow {
+  fill: $frame-side-nav-text-01;
+}
