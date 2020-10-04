@@ -3,3 +3,9 @@
 /// @type String
 /// @example .nt-batch-actions
 $prefix: "ii" !default;
+
+/// Sets the default theme
+/// @access public
+/// @type String
+/// @example light
+$theme: "dark" !default;

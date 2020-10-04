@@ -1,48 +1,41 @@
-// .storybook/preview.js
-// import { DocsContainer } from '@storybook/addon-docs/blocks';
-// import Nav from '../src/components/Button/Nav.js'
+import { StoryContext, StoryGetter, StoryWrapper } from '@storybook/addons'
 
-import Vue from 'vue'
-import { 
-  NavbarPlugin,
-  VBScrollspyPlugin
-} from 'bootstrap-vue'
-
-Vue.use(NavbarPlugin)
-Vue.use(VBScrollspyPlugin)
-
-import '../src/styles/styles.scss'
-
-const SOURCE_REGEX = /`(?:[^`])*`$/gm
+// import '../src/styles/_styles.scss'
+import '../src/styles/themes/theme-light.scss'
+// import '../src/styles/themes/theme-dark.scss'
 
 export const parameters = {
-  controls: { expanded: true },
-  layout: 'centered'
-  // docs: {
-  //   transformSource: (src, storyId) => {
-  //     const match = SOURCE_REGEX.exec(src)
-  //     const clean = match[0].replace(/`/gm, "")
-  //     console.log(clean)
-  //     return match ? match[0] : src
-  //     // return src
-  //   }
-  // }
+  layout: 'centered',
+  controls: { expanded: true }
 }
 
-// export const globalTypes = {
-//   locale: {
-//     name: 'Locale',
-//     description: 'Internationalization locale',
-//     defaultValue: 'en',
-//     toolbar: {
-//       icon: 'globe',
-//       items: [
-//         { value: 'en', right: '🇺🇸', title: 'English' },
-//         { value: 'fr', right: '🇫🇷', title: 'Français' },
-//         { value: 'es', right: '🇪🇸', title: 'Español' },
-//         { value: 'zh', right: '🇨🇳', title: '中文' },
-//         { value: 'kr', right: '🇰🇷', title: '한국어' },
-//       ]
-//     }
-//   }
-// }
+
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'theme-light',
+    toolbar: {
+      icon: 'paintbrush',
+      items: [
+          { value: 'theme-light', title: 'Light theme'},
+          { value: 'theme-dark', title: 'Dark theme'}
+      ]
+    }
+  }
+}
+
+const withTheme = (Story, context) => {
+  console.log(context.globals.theme)
+  // const { the } = context.globals.theme
+  return {
+    data() {
+      return {
+        theme: context.globals.theme
+      }
+    },
+    template: `<div :class="theme"><story /></div>`
+  }
+}
+
+export const decorators = [withTheme]

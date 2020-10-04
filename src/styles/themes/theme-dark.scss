@@ -1,0 +1,10 @@
+@import "../../assets/tokens/tokensAndPalette.scss";
+@import "../../assets/tokens/textStyles.map.scss";
+@import "../../assets/themes/dark.map.scss";
+@import "../toolbox.scss";
+@import "../styles.scss";
+
+.theme-dark {
+  --test: #ff0;
+  background-color: var(--test);
+}

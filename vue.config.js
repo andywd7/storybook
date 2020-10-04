@@ -12,12 +12,7 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        prependData: `
-          @import "@/assets/tokens/tokensAndPalette.scss";
-          @import "@/assets/tokens/textStyles.map.scss";
-          @import "@/assets/tokens/themes/dark.scss";
-          @import "@/styles/toolbox.scss";
-        `,
+        prependData: `@import "@/styles/toolbox.scss";`,
         sourceMap: true
       }
     },

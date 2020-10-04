@@ -1,28 +1,13 @@
-import { withDesign } from "storybook-addon-designs"
-
 import IiButton from "./Button.vue"
-import MDX from "./Button.storie.mdx"
+import MDX from "./CSF-MDXpage.mdx"
+import { sizeOptions, typeOptions, variantOptions } from "../store"
 // import VUE from "!!raw-loader!./Button.vue"
 // import CSS from "!!raw-loader!./button.css"
 
-const sizeOptions = {
-  Default: undefined,
-  Small: "sm"
-}
-
-const variantOptions = {
-  Default: undefined,
-  Primary: "primary",
-  Secondary: "secondary",
-  Standard: "standard",
-  Danger: "danger",
-  Ghost: "ghost"
-}
-
 export default {
-  title: "Components/Button",
+  title: "CSF-MDXpage",
   component: IiButton,
-  decorators: [withDesign],
+  // decorators: [withDesign],
   parameters: {
     controls: {
       disable: true
@@ -36,6 +21,12 @@ export default {
       control: {
         type: "select",
         options: sizeOptions
+      }
+    },
+    type: {
+      control: {
+        type: "select",
+        options: typeOptions
       }
     },
     variant: {
@@ -100,11 +91,6 @@ Primary.args = {
   variant: "primary"
 }
 Primary.parameters = {
-  design: {
-    type: "figma",
-    url:
-      "https://www.figma.com/file/xV0XmrrCru3JAPH8w0FWb5/%F0%9F%93%90Netace-UI?node-id=83%3A2"
-  },
   docs: {
     source: {
       code: `<ii-button variant="primary">Primary</ii-button>`

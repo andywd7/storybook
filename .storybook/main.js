@@ -1,25 +1,15 @@
 module.exports = {
   stories: [
     "../src/components/**/*.stories.mdx",
-    // "../src/components/**/*.mdx",
     "../src/components/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   addons: [
     "@storybook/addon-a11y",
+    "@storybook/addon-cssresources",
     "@storybook/addon-essentials",
     "@storybook/addon-links",
     "storybook-addon-designs"
   ],
-  // refs: {
-  //   vue: { 
-  //     title: "Vue",
-  //     url: 'http://localhost:6006' 
-  //   },
-  //   html: { 
-  //     title: "HTML",
-  //     url: 'http://localhost:9006' 
-  //   }
-  // },
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
@@ -33,12 +23,7 @@ module.exports = {
         {
           loader: 'sass-loader',
           options: {
-            prependData: `
-              @import "src/assets/tokens/tokensAndPalette.scss";
-              @import "src/assets/tokens/textStyles.map.scss";
-              @import "src/assets/tokens/themes/dark.scss";
-              @import "src/styles/toolbox.scss";
-            `,
+            prependData: `@import "src/styles/toolbox.scss";`,
             sourceMap: true
           }
         }
@@ -46,6 +31,6 @@ module.exports = {
     })
 
     // Return the altered config
-    return config;
-  },
+    return config
+  }
 }
