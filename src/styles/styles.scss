@@ -1,0 +1,17 @@
+// Override styles for Bootstrap
+// -----------------------------------------------------------------------------
+@import "bootstrap-custom/bootstrap-custom";
+
+.theme-light {
+    --test: #ff0;
+}
+
+.theme-dark {
+    --test: #f00;
+}
+
+.theme {
+    background-color: var(--test);
+}
+
+

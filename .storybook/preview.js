@@ -1,8 +1,6 @@
-import { StoryContext, StoryGetter, StoryWrapper } from '@storybook/addons'
+// import { StoryContext, StoryGetter, StoryWrapper } from '@storybook/addons'
 
-// import '../src/styles/_styles.scss'
-import '../src/styles/themes/theme-light.scss'
-// import '../src/styles/themes/theme-dark.scss'
+import '../src/styles/styles.scss'
 
 export const parameters = {
   layout: 'centered',
@@ -34,7 +32,7 @@ const withTheme = (Story, context) => {
         theme: context.globals.theme
       }
     },
-    template: `<div :class="theme"><story /></div>`
+    template: `<div class="theme" :class="theme"><story /></div>`
   }
 }
 
