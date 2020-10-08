@@ -123,26 +123,3 @@ Ghost.parameters = {
     }
   }
 }
-
-// const buttonVariants = (args, { argTypes }) => ({
-//   props: Object.keys(argTypes),
-//   components: { IiButton },
-//   template: `<ii-button :variant="variant">{{text}}</ii-button>`
-// })
-
-// export const Primary = buttonVariants.bind()
-// Primary.args = {
-//   text: "Button",
-//   variant: "primary"
-// }
-
-// const SOURCE_REGEX = /`(?:[^`])*`$/gm
-// Primary.parameters = {
-//   docs: {
-//     transformSource: src => {
-//       const match = SOURCE_REGEX.exec(src)
-//       const clean = match[0].replace(/`/gm, "")
-//       return match ? clean : src
-//     }
-//   }
-// }

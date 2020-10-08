@@ -48,11 +48,11 @@ Primary1.args = {
   variant: "primary"
 }
 Primary1.parameters = {
-  design: {
-    type: "figma",
-    url:
-      "https://www.figma.com/file/xV0XmrrCru3JAPH8w0FWb5/%F0%9F%93%90Netace-UI?node-id=83%3A2"
-  },
+  // design: {
+  //   type: "figma",
+  //   url:
+  //     "https://www.figma.com/file/xV0XmrrCru3JAPH8w0FWb5/%F0%9F%93%90Netace-UI?node-id=83%3A2"
+  // },
   docs: {
     source: {
       code: `<ii-button variant="primary">Primary</ii-button>`

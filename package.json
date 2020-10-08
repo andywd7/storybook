@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "sb": "start-storybook -p 6006",
+    "sb": "start-storybook -s ./public -p 6006",
     "build:sb": "build-storybook",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",

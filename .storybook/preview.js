@@ -3,8 +3,15 @@
 import '../src/styles/styles.scss'
 
 export const parameters = {
-  layout: 'centered',
+  layout: 'fullscreen',
   controls: { expanded: true }
+  // backgrounds: {
+  //   default: 'twitter',
+  //   values: [
+  //     { name: 'twitter', value: '#00aced' },
+  //     { name: 'facebook', value: '#3b5998' }
+  //   ]
+  // }
 }
 
 
@@ -23,7 +30,7 @@ export const globalTypes = {
   }
 }
 
-const withTheme = (Story, context) => {
+const withTheme = (Story, context) => { 
   console.log(context.globals.theme)
   // const { the } = context.globals.theme
   return {
