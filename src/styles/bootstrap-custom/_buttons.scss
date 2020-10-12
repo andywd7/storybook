@@ -16,10 +16,10 @@
 ) {
   @if $ghost {
     border-color: $background;
-  }
-  @else {
+  } @else {
     background-color: $background;
   }
+
   color: $color;
 
   &:hover,
@@ -81,27 +81,47 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-
 //
 // Button variants
 //
 
 .#{$prefix}-btn {
-  @include button-variant($interactive-02, $hover-secondary, $active-secondary, $text-03, true);
+  @include button-variant(
+    $interactive-02,
+    $hover-secondary,
+    $active-secondary,
+    $text-03,
+    true
+  );
 }
 
 .#{$prefix}-btn--primary,
 .btn-primary {
-  @include button-variant($interactive-01, $hover-primary, $active-primary, $text-04);
+  @include button-variant(
+    $interactive-01,
+    $hover-primary,
+    $active-primary,
+    $text-04
+  );
 }
 
 .#{$prefix}-btn--secondary,
 .btn-secondary {
-  @include button-variant($interactive-02, $hover-secondary, $active-secondary, $text-04);
+  @include button-variant(
+    $interactive-02,
+    $hover-secondary,
+    $active-secondary,
+    $text-04
+  );
 }
 
 .#{$prefix}-btn--standard {
-  @include button-variant(transparent, $hover-tertiary, $active-tertiary, $interactive-03);
+  @include button-variant(
+    transparent,
+    $hover-tertiary,
+    $active-tertiary,
+    $interactive-03
+  );
   border-color: $interactive-03;
 
   &:hover,
@@ -141,12 +161,15 @@ fieldset:disabled a.btn {
   }
 }
 
-
 //
 // Button Sizes
 //
 
 .#{$prefix}-btn--sm,
 .btn-sm {
-  @include button-base($btn-padding-y-sm, $btn-padding-x-sm, $btn-border-radius-sm);
+  @include button-base(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-border-radius-sm
+  );
 }

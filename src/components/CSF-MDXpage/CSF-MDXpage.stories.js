@@ -1,6 +1,7 @@
 import IiButton from "./Button.vue"
 import MDX from "./CSF-MDXpage.mdx"
 import { sizeOptions, typeOptions, variantOptions } from "../store"
+// import { ArgsTable } from "@storybook/addon-docs/blocks"
 // import VUE from "!!raw-loader!./Button.vue"
 // import CSS from "!!raw-loader!./button.css"
 

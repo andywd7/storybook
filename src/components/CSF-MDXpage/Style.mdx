@@ -1,6 +1,6 @@
-import { TabsState } from '@storybook/components'
+import { TabsState } from "@storybook/components"
 import { Figma } from "storybook-addon-designs/blocks"
-import { Var } from '@dan-nz/storybook-documentation-primitives';
+import { Var } from "@dan-nz/storybook-documentation-primitives"
 import themeDark from "../../assets/tokens/themes/dark"
 
 ## Style
@@ -8,7 +8,15 @@ import themeDark from "../../assets/tokens/themes/dark"
 export const val = Object.values(themeDark.theme)
 
 export const tok = Object.values(themeDark.theme).map((t, i) => {
-  return <tr key={i}><td>${val[i].name}</td><td>{val[i].docs.role}</td><td><Var>{val[i].value}</Var></td></tr>
+  return (
+    <tr key={i}>
+      <td>${val[i].name}</td>
+      <td>{val[i].docs.role}</td>
+      <td>
+        <Var>{val[i].value}</Var>
+      </td>
+    </tr>
+  )
 })
 
 <TabsState initial="primaryDesign">
