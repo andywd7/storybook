@@ -67,12 +67,12 @@ $colors: map-merge(
   $colors
 );
 
-$primary: $interactive-01;
-$secondary: $interactive-02;
+$primary: $theme-interactive-01;
+$secondary: $theme-interactive-02;
 // $success:       $green !default;
 // $info:          $cyan !default;
 // $warning:       $yellow !default;
-$danger: $danger;
+$danger: $theme-danger;
 $light: $gray-100;
 $dark: $gray-800;
 
@@ -80,13 +80,7 @@ $theme-colors: ();
 // // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary": $primary // "secondary":  $secondary,
-      // "success":    $success,
-      // "info":       $info,
-      // "warning":    $warning,
-      // "danger":     $danger,
-      // "light":      $light,
-      // "dark":       $dark
+    "primary": $primary
   ),
   $theme-colors
 );
@@ -158,8 +152,8 @@ $enable-shadows: true;
 // //
 // // Settings for the `<body>` element.
 
-$body-bg: $ui-background;
-$body-color: $inverse-01;
+$body-bg: $theme-ui-background;
+$body-color: $theme-text-01;
 
 // // Links
 // //
@@ -269,7 +263,7 @@ $border-radius-rounded: 50rem !default;
 // // Font, line-height, and color for body text, headings, and more.
 
 // // stylelint-disable value-keyword-case
-$font-family-sans-serif: $font-family;
+$font-family-sans-serif: $font-family-body;
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif;
 // // stylelint-enable value-keyword-case
@@ -347,18 +341,18 @@ $font-weight-bold: $font-weight-bold;
 // $table-cell-padding:          .75rem !default;
 // $table-cell-padding-sm:       .3rem !default;
 
-$table-color: $text-02;
-$table-bg: $ui-01;
+$table-color: $theme-text-02;
+$table-bg: $theme-ui-01;
 // $table-accent-bg:             rgba($black, .05) !default;
-$table-hover-color: $text-01;
-$table-hover-bg: $hover-row;
+$table-hover-color: $theme-text-01;
+// $table-hover-bg: $hover-row;
 // $table-active-bg:             $table-hover-bg !default;
 
 // $table-border-width:          $border-width !default;
-$table-border-color: $ui-03;
+$table-border-color: $theme-ui-03;
 
-$table-head-bg: $ui-03;
-$table-head-color: $text-02;
+$table-head-bg: $theme-ui-03;
+$table-head-color: $theme-text-02;
 
 // $table-dark-color:            $white !default;
 // $table-dark-bg:               $gray-800 !default;
@@ -461,11 +455,11 @@ $input-line-height: $input-btn-line-height;
 // $input-font-size-lg:                    $input-btn-font-size-lg !default;
 // $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
-$input-bg: $field-01;
+$input-bg: $theme-field-01;
 // $input-disabled-bg:                     $gray-200 !default;
 
-$input-color: $text-01;
-$input-border-color: $field-01;
+$input-color: $theme-text-01;
+$input-border-color: $theme-field-01;
 // $input-border-width: $input-btn-border-width !default;
 // $input-box-shadow: inset 0 0 0 $input-border-width $focus !default;
 
@@ -474,7 +468,7 @@ $input-border-color: $field-01;
 // $input-border-radius-sm:                $border-radius-sm !default;
 
 // $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color: $focus;
+$input-focus-border-color: $theme-focus;
 // $input-focus-color:                     $input-color !default;
 // $input-focus-width:                     $input-btn-focus-width !default;
 // $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;

@@ -1,0 +1,69 @@
+{
+  "theme": {
+    "focus": {
+      "value": "{color.blue.blue-60.value}",
+      "description": "Focus border; Focus underline"
+    },
+    "inverse_focus_ui": {
+      "value": "{color.white.value}",
+      "description": "Focus on high contrast moments"
+    },
+    "hover_primary": {
+      "value": "{color.blue.blue-80.value}",
+      "description": "$interactive-01 hover"
+    },
+    "hover_primary_text": {
+      "value": "{color.blue.blue-70.value}",
+      "description": "$interactive-01 text hover"
+    },
+    "hover_secondary": {
+      "value": "{color.grey.grey-hover-80.value}",
+      "description": "$interactive-02 hover"
+    },
+    "hover_tertiary": {
+      "value": "{color.blue.blue-60.value}"
+    },
+    "hover_ui": {
+      "value": "{color.grey.grey-hover-10.value}"
+    },
+    "hover_ui_light": {
+      "value": "{color.grey.grey-hover-10.value}"
+    },
+    "hover_selected_ui": {
+      "value": "{color.grey.grey-hover-20.value}"
+    },
+    "hover_danger": {
+      "value": "{color.red.red-60.value}"
+    },
+    "hover_row": {
+      "value": "{color.grey.grey-hover-10.value}"
+    },
+    "inverse_hover_ui": {
+      "value": "{color.grey.grey-hover-80.value}"
+    },
+    "active_primary": {
+      "value": "{color.blue.blue-80.value}"
+    },
+    "active_secondary": {
+      "value": "{color.grey.grey-60.value}"
+    },
+    "active_tertiary": {
+      "value": "{color.blue.blue-80.value}"
+    },
+    "active_ui": {
+      "value": "{color.grey.grey-30.value}"
+    },
+    "active_danger": {
+      "value": "{color.red.red-80.value}"
+    },
+    "disabled_01": {
+      "value": "{color.grey.grey-10.value}"
+    },
+    "disabled_02": {
+      "value": "{color.grey.grey-30.value}"
+    },
+    "disabled_03": {
+      "value": "{color.grey.grey-50.value}"
+    }
+  }
+}

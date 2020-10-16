@@ -1,0 +1,93 @@
+{
+  "theme": {
+    "ui_background": {
+      "value": "{color.white.value}",
+      "description": "Default page background"
+    },
+    "interactive_01": {
+      "value": "{color.blue.blue-60.value}",
+      "description": "Primary interactive color; Interactive text; Selected elements; Featured elements"
+    },
+    "interactive_02": {
+      "value": "{color.grey.grey-80.value}",
+      "description": "Secondary button"
+    },
+    "interactive_03": {
+      "value": "{color.blue.blue-60.value}",
+      "description": "Tertiary button"
+    },
+    "interactive_04": {
+      "value": "{color.blue.blue-60.value}",
+      "description": "Selected nav indicator; Active elements"
+    },
+    "danger": {
+      "value": "{color.red.red-60.value}"
+    },
+    "ui_01": {
+      "value": "{color.grey.grey-10.value}"
+    },
+    "ui_02": {
+      "value": "{color.white.value}"
+    },
+    "ui_03": {
+      "value": "{color.grey.grey-20.value}"
+    },
+    "ui_04": {
+      "value": "{color.grey.grey-50.value}"
+    },
+    "ui_05": {
+      "value": "{color.grey.grey-100.value}"
+    },
+    "button_separator": {
+      "value": "{color.grey.grey-20.value}"
+    },
+    "decorative_01": {
+      "value": "{color.grey.grey-20.value}"
+    },
+    "text_01": {
+      "value": "{color.grey.grey-100.value}"
+    },
+    "text_02": {
+      "value": "{color.grey.grey-70.value}"
+    },
+    "text_03": {
+      "value": "{color.grey.grey-40.value}"
+    },
+    "text_04": {
+      "value": "{color.white.value}"
+    },
+    "text_05": {
+      "value": "{color.grey.grey-60.value}"
+    },
+    "text_error": {
+      "value": "{color.red.red-60.value}"
+    },
+    "link_01": {
+      "value": "{color.blue.blue-60.value}"
+    },
+    "inverse_link": {
+      "value": "{color.blue.blue-40.value}"
+    },
+    "icon_01": {
+      "value": "{color.grey.grey-100.value}"
+    },
+    "icon_02": {
+      "value": "{color.grey.grey-70.value}"
+    },
+    "icon_03": {
+      "value": "{color.white.value}"
+    },
+    "field_01": {
+      "value": "{color.grey.grey-10.value}"
+    },
+    "field_02": {
+      "value": "{color.white.value}"
+    },
+    "inverse_01": {
+      "value": "{color.white.value}"
+    },
+    "inverse_02": {
+      "value": "{color.grey.grey-80.value}"
+    }
+  }
+}
