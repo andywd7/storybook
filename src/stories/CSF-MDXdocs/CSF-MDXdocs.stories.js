@@ -1,4 +1,4 @@
-import IiButton from "../CSF-MDXpage/Button.vue"
+import IiButton from "../../components/Button/Button.vue"
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),

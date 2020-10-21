@@ -6,15 +6,16 @@ import {
   Canvas,
   ArgsTable 
 } from '@storybook/addon-docs/blocks'
-import { sizeOptions, typeOptions, variantOptions } from "../store"
-import IiButton from "../CSF-MDXpage/Button.vue"
-import Usage from './Usage.mdx'
-import Code from './Code.mdx'
-import Style from './Style.mdx'
-import A11y from './A11y.mdx'
+import IiButton from "../../components/Button/Button.vue"
+import * as Stories from './CSF-MDXdocs.stories.js'
+import {
+  sizeOptions,
+  typeOptions,
+  variantOptions
+} from "../../components/store"
 
 <Meta
-  title='MDX'
+  title='TYPES/CSF-MDXdocs'
   component={IiButton}
   argTypes={{
     size: {
@@ -57,21 +58,12 @@ export const Template = (args, { argTypes }) => ({
 })
 
 <Canvas>
-  <Story
-    name="playground2"
-    args={{
-      variant: "secondary"
-    }}
-  >
-    {Template.bind()}
-  </Story>
+  <Story story={Stories.Playground1} />
 </Canvas>
-
-<ArgsTable story="playground2" />
 
 <Canvas>
   <Story
-    name="primary2"
+    name="primary11"
     args={{
       variant: "primary"
     }}
@@ -80,54 +72,4 @@ export const Template = (args, { argTypes }) => ({
   </Story>
 </Canvas>
 
-<Canvas>
-  <Story
-    name="secondary2"
-    args={{
-      variant: "secondary"
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="standard2"
-    args={{
-      variant: "standard"
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="danger2"
-    args={{
-      variant: "danger"
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="ghost2"
-    args={{
-      variant: "ghost"
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Usage />
-
-<Code />
-
-<Style />
-
-<A11y />
+<ArgsTable story="primary11" />

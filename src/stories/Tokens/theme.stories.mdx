@@ -1,0 +1,72 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Story,
+  Canvas,
+  ArgsTable 
+} from '@storybook/addon-docs/blocks'
+import { TabsState } from "@storybook/components"
+import { Tile, Var } from "@dan-nz/storybook-documentation-primitives"
+import themeDark from "../../tokens/themes/theme.json"
+import { SPACING_08 } from "../../tokens/web/js/tokensAndPalette"
+
+export const tokensTheme = Object.values(themeDark.theme).map((t, i) => {
+  const styles = {
+    backgroundColor: t.value,
+    borderRadius: SPACING_08,
+    height: SPACING_08,
+    width: SPACING_08
+  }
+  return (
+    <tr key={i}>
+      <td><Var>{"$" + t.name}</Var></td>
+      <td>{t.description}</td>
+      <td width="200">
+        <div className="token-value">
+          <div>
+            {t.valueName}
+            <br/>
+            -
+            <br/>
+            <Var>{t.value}</Var>
+          </div>
+          <div style={styles} />
+        </div>
+      </td>
+    </tr>
+  )
+})
+
+<Meta title='TOKENS/Theme' parameters={{ previewTabs: { canvas: { hidden: true } } }} />
+
+<Title />
+
+<Subtitle>Tokens subtitle</Subtitle>
+
+<TabsState initial="core">
+  <div id="core" title="Core">
+    <table className="table">
+      <thead className="thead-dark">
+        <tr>
+            <th width="120">Token</th>
+            <th>Role</th>
+            <th width="120">Value</th>
+        </tr>
+      </thead>
+      <tbody>{tokensTheme}</tbody>
+    </table>   
+  </div>
+  <div id="interactive" title="Interactive">
+    <table className="table">
+      <thead className="thead-dark">
+        <tr>
+            <th width="120">Token</th>
+            <th>Role</th>
+            <th width="120">Value</th>
+        </tr>
+      </thead>
+      <tbody>{tokensTheme}</tbody>
+    </table>
+  </div>
+</TabsState>

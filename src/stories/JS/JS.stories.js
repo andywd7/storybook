@@ -1,20 +1,16 @@
-import IiButton from "./Button.vue"
-import MDX from "./CSF-MDXpage.mdx"
-import { sizeOptions, typeOptions, variantOptions } from "../store"
-// import { ArgsTable } from "@storybook/addon-docs/blocks"
-// import VUE from "!!raw-loader!./Button.vue"
-// import CSS from "!!raw-loader!./button.css"
+import IiButton from "../../components/Button/Button.vue"
+import {
+  sizeOptions,
+  typeOptions,
+  variantOptions
+} from "../../components/store"
 
 export default {
-  title: "CSF-MDXpage",
+  title: "TYPES/JS",
   component: IiButton,
-  // decorators: [withDesign],
   parameters: {
     controls: {
       disable: true
-    },
-    docs: {
-      page: MDX
     }
   },
   argTypes: {
@@ -53,19 +49,22 @@ const Template = (args, { argTypes }) => ({
   template: `<ii-button v-bind="$props">{{ this.default }}</ii-button>`
 })
 
-export const Playground = Template.bind()
-Playground.parameters = {
+export const Playground3 = Template.bind()
+Playground3.args = {
+  variant: "secondary"
+}
+Playground3.parameters = {
   controls: {
     disable: false
   }
 }
 
-export const Standard = Template.bind()
-Standard.args = {
+export const Standard3 = Template.bind()
+Standard3.args = {
   default: "Standard",
   variant: "standard"
 }
-Standard.parameters = {
+Standard3.parameters = {
   docs: {
     source: {
       code: `<ii-button>Standard</ii-button>`
@@ -73,12 +72,12 @@ Standard.parameters = {
   }
 }
 
-export const Secondary = Template.bind()
-Secondary.args = {
+export const Secondary3 = Template.bind()
+Secondary3.args = {
   default: "Secondary",
   variant: "secondary"
 }
-Secondary.parameters = {
+Secondary3.parameters = {
   docs: {
     source: {
       code: `<ii-button variant="secondary">Secondary</ii-button>`
@@ -86,12 +85,12 @@ Secondary.parameters = {
   }
 }
 
-export const Primary = Template.bind()
-Primary.args = {
+export const Primary3 = Template.bind()
+Primary3.args = {
   default: "Primary",
   variant: "primary"
 }
-Primary.parameters = {
+Primary3.parameters = {
   docs: {
     source: {
       code: `<ii-button variant="primary">Primary</ii-button>`
@@ -99,12 +98,12 @@ Primary.parameters = {
   }
 }
 
-export const Danger = Template.bind()
-Danger.args = {
+export const Danger3 = Template.bind()
+Danger3.args = {
   default: "Danger",
   variant: "danger"
 }
-Danger.parameters = {
+Danger3.parameters = {
   docs: {
     source: {
       code: `<ii-button variant="danger">Danger</ii-button>`
@@ -112,12 +111,12 @@ Danger.parameters = {
   }
 }
 
-export const Ghost = Template.bind()
-Ghost.args = {
+export const Ghost3 = Template.bind()
+Ghost3.args = {
   default: "Ghost",
   variant: "ghost"
 }
-Ghost.parameters = {
+Ghost3.parameters = {
   docs: {
     source: {
       code: `<ii-button variant="ghost">Ghost</ii-button>`

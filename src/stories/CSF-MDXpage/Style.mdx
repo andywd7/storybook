@@ -2,15 +2,16 @@ import { TabsState } from "@storybook/components"
 import { Figma } from "storybook-addon-designs/blocks"
 import { Var } from "@dan-nz/storybook-documentation-primitives"
 import themeDark from "../../tokens/themes/theme.json"
+import { SPACING_08 } from "../../tokens/web/js/tokensAndPalette"
 
 ## Style
 
 export const toks = Object.values(themeDark.theme).map((t, i) => {
   const styles = {
     backgroundColor: t.value,
-    borderRadius: '40px',
-    height: '40px',
-    width: '40px'
+    borderRadius: SPACING_08,
+    height: SPACING_08,
+    width: SPACING_08
   }
   return (
     <tr key={i}>
