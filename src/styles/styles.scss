@@ -2,11 +2,11 @@
 // -----------------------------------------------------------------------------
 @import "bootstrap-custom/bootstrap-custom";
 
-.theme-light {
+.light-theme {
   --test: #ff0;
 }
 
-.theme-dark {
+.dark-theme {
   --test: #f00;
 }
 
@@ -14,5 +14,3 @@
   background-color: var(--test);
   padding: 1rem;
 }
-
-

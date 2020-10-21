@@ -31,6 +31,12 @@
       "grey-100": {
         "value": "#121619"
       }
+    },
+    "white": {
+      "value": "#fff"
+    },
+    "black": {
+      "value": "#000"
     }
   }
 }

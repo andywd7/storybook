@@ -1,10 +1,10 @@
 {
-  "border-radius": [
+  "borderRadius": [
     {
       "value": "2px",
       "name": "border-radius-01",
       "attributes": {
-        "category": "border-radius",
+        "category": "borderRadius",
         "type": "01"
       }
     },
@@ -12,7 +12,7 @@
       "value": "3px",
       "name": "border-radius-02",
       "attributes": {
-        "category": "border-radius",
+        "category": "borderRadius",
         "type": "02"
       }
     },
@@ -20,17 +20,17 @@
       "value": "6px",
       "name": "border-radius-03",
       "attributes": {
-        "category": "border-radius",
+        "category": "borderRadius",
         "type": "03"
       }
     }
   ],
-  "box-shadow": [
+  "boxShadow": [
     {
       "value": "none",
       "name": "box-shadow-none",
       "attributes": {
-        "category": "box-shadow",
+        "category": "boxShadow",
         "type": "none"
       }
     },
@@ -38,7 +38,7 @@
       "value": "0 1px 1px rgba(0,0,0,.2)",
       "name": "box-shadow-component",
       "attributes": {
-        "category": "box-shadow",
+        "category": "boxShadow",
         "type": "component"
       }
     },
@@ -46,7 +46,7 @@
       "value": "0 1px 3px rgba(0,0,0,.2)",
       "name": "box-shadow-temporary",
       "attributes": {
-        "category": "box-shadow",
+        "category": "boxShadow",
         "type": "temporary"
       }
     },
@@ -54,7 +54,7 @@
       "value": "0 2px 4px rgba(0,0,0,0.2)",
       "name": "box-shadow-navigation",
       "attributes": {
-        "category": "box-shadow",
+        "category": "boxShadow",
         "type": "navigation"
       }
     },
@@ -62,7 +62,7 @@
       "value": "0 4px 8px rgba(0,0,0,0.2)",
       "name": "box-shadow-notification",
       "attributes": {
-        "category": "box-shadow",
+        "category": "boxShadow",
         "type": "notification"
       }
     },
@@ -70,7 +70,7 @@
       "value": "0 6px 12px rgba(0,0,0,0.2)",
       "name": "box-shadow-modal",
       "attributes": {
-        "category": "box-shadow",
+        "category": "boxShadow",
         "type": "modal"
       }
     }
@@ -251,12 +251,12 @@
       }
     }
   ],
-  "line-height": [
+  "lineHeight": [
     {
       "value": "64px",
       "name": "line-height-10",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "10"
       }
     },
@@ -264,7 +264,7 @@
       "value": "16px",
       "name": "line-height-01",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "01"
       }
     },
@@ -272,7 +272,7 @@
       "value": "18px",
       "name": "line-height-02",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "02"
       }
     },
@@ -280,7 +280,7 @@
       "value": "20px",
       "name": "line-height-03",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "03"
       }
     },
@@ -288,7 +288,7 @@
       "value": "22px",
       "name": "line-height-04",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "04"
       }
     },
@@ -296,7 +296,7 @@
       "value": "24px",
       "name": "line-height-05",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "05"
       }
     },
@@ -304,7 +304,7 @@
       "value": "26px",
       "name": "line-height-06",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "06"
       }
     },
@@ -312,7 +312,7 @@
       "value": "36px",
       "name": "line-height-07",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "07"
       }
     },
@@ -320,7 +320,7 @@
       "value": "40px",
       "name": "line-height-08",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "08"
       }
     },
@@ -328,7 +328,7 @@
       "value": "50px",
       "name": "line-height-09",
       "attributes": {
-        "category": "line-height",
+        "category": "lineHeight",
         "type": "09"
       }
     }
@@ -860,7 +860,7 @@
     },
     {
       "value": "#ffffff",
-      "name": "color-white",
+      "name": "white",
       "attributes": {
         "category": "color",
         "type": "white"
@@ -868,7 +868,7 @@
     },
     {
       "value": "#000000",
-      "name": "color-black",
+      "name": "black",
       "attributes": {
         "category": "color",
         "type": "black"

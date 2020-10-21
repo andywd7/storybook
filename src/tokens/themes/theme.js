@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 15 Oct 2020 22:54:19 GMT
+ * Generated on Sat, 17 Oct 2020 17:42:29 GMT
  */
 
 export const THEME_UI_BACKGROUND = "#fff";
@@ -31,6 +31,15 @@ export const THEME_FIELD_01 = "#f2f4f8";
 export const THEME_FIELD_02 = "#fff";
 export const THEME_INVERSE_01 = "#fff";
 export const THEME_INVERSE_02 = "#343a3f";
+export const THEME_SUPPORT_01 = "#d8222f";
+export const THEME_SUPPORT_02 = "#24a148";
+export const THEME_SUPPORT_03 = "#fbf95b";
+export const THEME_SUPPORT_04 = "#053fc4";
+export const THEME_INVERSE_SUPPORT_01 = "#f74f5a";
+export const THEME_INVERSE_SUPPORT_02 = "#42be65";
+export const THEME_INVERSE_SUPPORT_03 = "#fffd7e";
+export const THEME_INVERSE_SUPPORT_04 = "#4080fb";
+export const THEME_OVERLAY_01 = "#121619";
 export const THEME_FOCUS = "#165cfa";
 export const THEME_INVERSE_FOCUS_UI = "#fff";
 export const THEME_HOVER_PRIMARY = "#022b8f";
@@ -48,7 +57,11 @@ export const THEME_ACTIVE_SECONDARY = "#697077";
 export const THEME_ACTIVE_TERTIARY = "#022b8f";
 export const THEME_ACTIVE_UI = "#c1c7cd";
 export const THEME_ACTIVE_DANGER = "#741017";
+export const THEME_SELECTED_UI = "#dde1e6";
+export const THEME_HIGHLIGHT = "#cadefe";
+export const THEME_SKELETON_01 = "#c4c9d1";
+export const THEME_SKELETON_02 = "#c1c7cd";
+export const THEME_VISITED_LINK = "#8949f8";
 export const THEME_DISABLED_01 = "#f2f4f8";
 export const THEME_DISABLED_02 = "#c1c7cd";
 export const THEME_DISABLED_03 = "#878d96";
-export const BREAKPOINT_MAX = "2560px";

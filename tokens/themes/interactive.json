@@ -21,49 +21,84 @@
       "description": "$interactive-02 hover"
     },
     "hover_tertiary": {
-      "value": "{color.blue.blue-60.value}"
+      "value": "{color.blue.blue-60.value}",
+      "description": "$interactive-03 hover; $inverse-01 hover"
     },
     "hover_ui": {
-      "value": "{color.grey.grey-hover-10.value}"
+      "value": "{color.grey.grey-hover-10.value}",
+      "description": "$ui-01 hover; $ui-02 hover; Transparent background hover"
     },
     "hover_ui_light": {
-      "value": "{color.grey.grey-hover-10.value}"
+      "value": "{color.grey.grey-hover-10.value}",
+      "description": "“Light” variant hover"
     },
     "hover_selected_ui": {
-      "value": "{color.grey.grey-hover-20.value}"
+      "value": "{color.grey.grey-hover-20.value}",
+      "description": "Selected row hover"
     },
     "hover_danger": {
-      "value": "{color.red.red-60.value}"
+      "value": "{color.red.red-60.value}",
+      "description": "Danger hover; $support-01 hover"
     },
     "hover_row": {
-      "value": "{color.grey.grey-hover-10.value}"
+      "value": "{color.grey.grey-hover-10.value}",
+      "description": "Row hover"
     },
     "inverse_hover_ui": {
-      "value": "{color.grey.grey-hover-80.value}"
+      "value": "{color.grey.grey-hover-80.value}",
+      "description": "Hover for $inverse-02"
     },
     "active_primary": {
-      "value": "{color.blue.blue-80.value}"
+      "value": "{color.blue.blue-80.value}",
+      "description": "$interactive-01 active"
     },
     "active_secondary": {
-      "value": "{color.grey.grey-60.value}"
+      "value": "{color.grey.grey-60.value}",
+      "description": "$interactive-02 active; $inverse-01 active"
     },
     "active_tertiary": {
-      "value": "{color.blue.blue-80.value}"
+      "value": "{color.blue.blue-80.value}",
+      "description": "$interactive-03 active"
     },
     "active_ui": {
-      "value": "{color.grey.grey-30.value}"
+      "value": "{color.grey.grey-30.value}",
+      "description": "$ui-01 active; $ui-02 active"
     },
     "active_danger": {
-      "value": "{color.red.red-80.value}"
+      "value": "{color.red.red-80.value}",
+      "description": "Danger active; $support-01 active"
+    },
+    "selected_ui": {
+      "value": "{color.grey.grey-20.value}",
+      "description": "Selected UI elements"
+    },
+    "highlight": {
+      "value": "{color.blue.blue-20.value}",
+      "description": "$interactive-01 highlight"
+    },
+    "skeleton_01": {
+      "value": "{color.grey.grey-hover-20.value}",
+      "description": "Skeleton state of graphics"
+    },
+    "skeleton_02": {
+      "value": "{color.grey.grey-30.value}",
+      "description": "Skeleton state of texts"
+    },
+    "visited_link": {
+      "value": "{color.purple.purple-60.value}",
+      "description": "Visited links"
     },
     "disabled_01": {
-      "value": "{color.grey.grey-10.value}"
+      "value": "{color.grey.grey-10.value}",
+      "description": "Disabled fields; Disabled backgrounds; Disabled border"
     },
     "disabled_02": {
-      "value": "{color.grey.grey-30.value}"
+      "value": "{color.grey.grey-30.value}",
+      "description": "Disabled elements on $disabled-01; Disabled label; Disabled text on $disabled-01; Disabled icons; Disabled border"
     },
     "disabled_03": {
-      "value": "{color.grey.grey-50.value}"
+      "value": "{color.grey.grey-50.value}",
+      "description": "Disabled text on $disabled-02; Disabled icons on $disabled-02"
     }
   }
 }

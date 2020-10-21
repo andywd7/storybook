@@ -5,15 +5,28 @@ import themeDark from "../../tokens/themes/theme.json"
 
 ## Style
 
-export const val = Object.values(themeDark.theme)
-
-export const tok = Object.values(themeDark.theme).map((t, i) => {
+export const toks = Object.values(themeDark.theme).map((t, i) => {
+  const styles = {
+    backgroundColor: t.value,
+    borderRadius: '40px',
+    height: '40px',
+    width: '40px'
+  }
   return (
     <tr key={i}>
-      <td>${val[i].name}</td>
-      <td>{val[i].description}</td>
-      <td>
-        <Var>{val[i].value}</Var>
+      <td><Var>{"$" + t.name}</Var></td>
+      <td>{t.description}</td>
+      <td width="200">
+        <div class="token-value">
+          <div>
+            {t.valueName}
+            <br/>
+            -
+            <br/>
+            <Var>{t.value}</Var>
+          </div>
+          <div style={styles} />
+        </div>
       </td>
     </tr>
   )
@@ -24,7 +37,7 @@ export const tok = Object.values(themeDark.theme).map((t, i) => {
     <Figma url="https://www.figma.com/file/xV0XmrrCru3JAPH8w0FWb5/%F0%9F%93%90Netace-UI?node-id=83%3A2" />
   </div>
   <div id="primaryTokens" title="Tokens">
-    <table width="100%">
+    <table class="table">
       <thead>
         <tr>
           <th width="120">Token</th>
@@ -32,7 +45,9 @@ export const tok = Object.values(themeDark.theme).map((t, i) => {
           <th width="120">Value</th>
         </tr>
       </thead>
-      <tbody>{tok}</tbody>
+      <tbody>
+        {toks}
+      </tbody>
     </table>
   </div>
 </TabsState>

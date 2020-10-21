@@ -2,6 +2,7 @@
   "theme": [
     {
       "value": "#ffffff",
+      "valueName": "white",
       "description": "Default page background",
       "name": "theme-ui-background",
       "attributes": {
@@ -11,6 +12,7 @@
     },
     {
       "value": "#165cfa",
+      "valueName": "blue-60",
       "description": "Primary interactive color; Interactive text; Selected elements; Featured elements",
       "name": "theme-interactive-01",
       "attributes": {
@@ -20,6 +22,7 @@
     },
     {
       "value": "#343a3f",
+      "valueName": "grey-80",
       "description": "Secondary button",
       "name": "theme-interactive-02",
       "attributes": {
@@ -29,6 +32,7 @@
     },
     {
       "value": "#165cfa",
+      "valueName": "blue-60",
       "description": "Tertiary button",
       "name": "theme-interactive-03",
       "attributes": {
@@ -38,6 +42,7 @@
     },
     {
       "value": "#165cfa",
+      "valueName": "blue-60",
       "description": "Selected nav indicator; Active elements",
       "name": "theme-interactive-04",
       "attributes": {
@@ -47,6 +52,8 @@
     },
     {
       "value": "#d8222f",
+      "valueName": "red-60",
+      "description": "Danger button background; 3:1 AA contrast",
       "name": "theme-danger",
       "attributes": {
         "category": "theme",
@@ -55,6 +62,8 @@
     },
     {
       "value": "#f2f4f8",
+      "valueName": "grey-60",
+      "description": "Container background on $ui-background; Secondary page background",
       "name": "theme-ui-01",
       "attributes": {
         "category": "theme",
@@ -63,6 +72,8 @@
     },
     {
       "value": "#ffffff",
+      "valueName": "white",
+      "description": "Container background on $ui-01; `Light` variant background",
       "name": "theme-ui-02",
       "attributes": {
         "category": "theme",
@@ -71,6 +82,8 @@
     },
     {
       "value": "#dde1e6",
+      "valueName": "grey-20",
+      "description": "Subtle border; Tertiary background",
       "name": "theme-ui-03",
       "attributes": {
         "category": "theme",
@@ -79,6 +92,8 @@
     },
     {
       "value": "#878d96",
+      "valueName": "grey-50",
+      "description": "3:1 aa element contrast; Medium contrast border",
       "name": "theme-ui-04",
       "attributes": {
         "category": "theme",
@@ -87,6 +102,7 @@
     },
     {
       "value": "#121619",
+      "description": "4.5:1 aa element contrast; High contrast border; Emphasis elements",
       "name": "theme-ui-05",
       "attributes": {
         "category": "theme",
@@ -95,6 +111,7 @@
     },
     {
       "value": "#dde1e6",
+      "description": "3:1 aa element contrast; Fluid button separator",
       "name": "theme-button-separator",
       "attributes": {
         "category": "theme",
@@ -103,6 +120,7 @@
     },
     {
       "value": "#dde1e6",
+      "description": "“Light” variant elements",
       "name": "theme-decorative-01",
       "attributes": {
         "category": "theme",
@@ -111,6 +129,7 @@
     },
     {
       "value": "#121619",
+      "description": "Primary text; Body copy; Headers; Hover text color for $text-02",
       "name": "theme-text-01",
       "attributes": {
         "category": "theme",
@@ -119,6 +138,7 @@
     },
     {
       "value": "#4d5358",
+      "description": "Secondary text; Input labels",
       "name": "theme-text-02",
       "attributes": {
         "category": "theme",
@@ -127,6 +147,7 @@
     },
     {
       "value": "#a2a9b0",
+      "description": "Placeholder text",
       "name": "theme-text-03",
       "attributes": {
         "category": "theme",
@@ -135,6 +156,7 @@
     },
     {
       "value": "#ffffff",
+      "description": "Text on interactive colors",
       "name": "theme-text-04",
       "attributes": {
         "category": "theme",
@@ -143,6 +165,7 @@
     },
     {
       "value": "#697077",
+      "description": "Tertiary text; Help text",
       "name": "theme-text-05",
       "attributes": {
         "category": "theme",
@@ -151,6 +174,7 @@
     },
     {
       "value": "#d8222f",
+      "description": "Error message text",
       "name": "theme-text-error",
       "attributes": {
         "category": "theme",
@@ -159,6 +183,7 @@
     },
     {
       "value": "#165cfa",
+      "description": "Primary links; Ghost button",
       "name": "theme-link-01",
       "attributes": {
         "category": "theme",
@@ -167,6 +192,7 @@
     },
     {
       "value": "#78a9ff",
+      "description": "Links on $inverse-02 backgrounds",
       "name": "theme-inverse-link",
       "attributes": {
         "category": "theme",
@@ -175,6 +201,7 @@
     },
     {
       "value": "#121619",
+      "description": "Primary icons",
       "name": "theme-icon-01",
       "attributes": {
         "category": "theme",
@@ -183,6 +210,7 @@
     },
     {
       "value": "#4d5358",
+      "description": "Secondary icons",
       "name": "theme-icon-02",
       "attributes": {
         "category": "theme",
@@ -191,6 +219,7 @@
     },
     {
       "value": "#ffffff",
+      "description": "Icons on interactive colors; Icons on non-ui colors",
       "name": "theme-icon-03",
       "attributes": {
         "category": "theme",
@@ -199,6 +228,7 @@
     },
     {
       "value": "#f2f4f8",
+      "description": "Default input fields; Fields on $ui-backgrounds",
       "name": "theme-field-01",
       "attributes": {
         "category": "theme",
@@ -207,6 +237,7 @@
     },
     {
       "value": "#ffffff",
+      "description": "“Light” variant input fields; Fields on $ui-01 backgrounds",
       "name": "theme-field-02",
       "attributes": {
         "category": "theme",
@@ -215,6 +246,7 @@
     },
     {
       "value": "#ffffff",
+      "description": "Inverse text color; Inverse icon color",
       "name": "theme-inverse-01",
       "attributes": {
         "category": "theme",
@@ -223,10 +255,92 @@
     },
     {
       "value": "#343a3f",
+      "description": "High contrast backgrounds; High contrast elements",
       "name": "theme-inverse-02",
       "attributes": {
         "category": "theme",
         "type": "inverse_02"
+      }
+    },
+    {
+      "value": "#d8222f",
+      "description": "Error",
+      "name": "theme-support-01",
+      "attributes": {
+        "category": "theme",
+        "type": "support_01"
+      }
+    },
+    {
+      "value": "#24a148",
+      "description": "Success",
+      "name": "theme-support-02",
+      "attributes": {
+        "category": "theme",
+        "type": "support_02"
+      }
+    },
+    {
+      "value": "#fbf95b",
+      "description": "Warning",
+      "name": "theme-support-03",
+      "attributes": {
+        "category": "theme",
+        "type": "support_03"
+      }
+    },
+    {
+      "value": "#053fc4",
+      "description": "Information",
+      "name": "theme-support-04",
+      "attributes": {
+        "category": "theme",
+        "type": "support_04"
+      }
+    },
+    {
+      "value": "#f74f5a",
+      "description": "Danger in high contrast moments",
+      "name": "theme-inverse-support-01",
+      "attributes": {
+        "category": "theme",
+        "type": "inverse_support_01"
+      }
+    },
+    {
+      "value": "#42be65",
+      "description": "Success in high contrast moments",
+      "name": "theme-inverse-support-02",
+      "attributes": {
+        "category": "theme",
+        "type": "inverse_support_02"
+      }
+    },
+    {
+      "value": "#fffd7e",
+      "description": "Warning in high contrast moments",
+      "name": "theme-inverse-support-03",
+      "attributes": {
+        "category": "theme",
+        "type": "inverse_support_03"
+      }
+    },
+    {
+      "value": "#4080fb",
+      "description": "Information in high contrast moments",
+      "name": "theme-inverse-support-04",
+      "attributes": {
+        "category": "theme",
+        "type": "inverse_support_04"
+      }
+    },
+    {
+      "value": "#121619",
+      "description": "Background overlay",
+      "name": "theme-overlay-01",
+      "attributes": {
+        "category": "theme",
+        "type": "overlay_01"
       }
     },
     {
@@ -276,6 +390,7 @@
     },
     {
       "value": "#165cfa",
+      "description": "$interactive-03 hover; $inverse-01 hover",
       "name": "theme-hover-tertiary",
       "attributes": {
         "category": "theme",
@@ -284,6 +399,7 @@
     },
     {
       "value": "#e0e4ea",
+      "description": "$ui-01 hover; $ui-02 hover; Transparent background hover",
       "name": "theme-hover-ui",
       "attributes": {
         "category": "theme",
@@ -292,6 +408,7 @@
     },
     {
       "value": "#e0e4ea",
+      "description": "“Light” variant hover",
       "name": "theme-hover-ui-light",
       "attributes": {
         "category": "theme",
@@ -300,6 +417,7 @@
     },
     {
       "value": "#c4c9d1",
+      "description": "Selected row hover",
       "name": "theme-hover-selected-ui",
       "attributes": {
         "category": "theme",
@@ -308,6 +426,7 @@
     },
     {
       "value": "#d8222f",
+      "description": "Danger hover; $support-01 hover",
       "name": "theme-hover-danger",
       "attributes": {
         "category": "theme",
@@ -316,6 +435,7 @@
     },
     {
       "value": "#e0e4ea",
+      "description": "Row hover",
       "name": "theme-hover-row",
       "attributes": {
         "category": "theme",
@@ -324,6 +444,7 @@
     },
     {
       "value": "#464c51",
+      "description": "Hover for $inverse-02",
       "name": "theme-inverse-hover-ui",
       "attributes": {
         "category": "theme",
@@ -332,6 +453,7 @@
     },
     {
       "value": "#022b8f",
+      "description": "$interactive-01 active",
       "name": "theme-active-primary",
       "attributes": {
         "category": "theme",
@@ -340,6 +462,7 @@
     },
     {
       "value": "#697077",
+      "description": "$interactive-02 active; $inverse-01 active",
       "name": "theme-active-secondary",
       "attributes": {
         "category": "theme",
@@ -348,6 +471,7 @@
     },
     {
       "value": "#022b8f",
+      "description": "$interactive-03 active",
       "name": "theme-active-tertiary",
       "attributes": {
         "category": "theme",
@@ -356,6 +480,7 @@
     },
     {
       "value": "#c1c7cd",
+      "description": "$ui-01 active; $ui-02 active",
       "name": "theme-active-ui",
       "attributes": {
         "category": "theme",
@@ -364,6 +489,7 @@
     },
     {
       "value": "#741017",
+      "description": "Danger active; $support-01 active",
       "name": "theme-active-danger",
       "attributes": {
         "category": "theme",
@@ -371,7 +497,53 @@
       }
     },
     {
+      "value": "#dde1e6",
+      "description": "Selected UI elements",
+      "name": "theme-selected-ui",
+      "attributes": {
+        "category": "theme",
+        "type": "selected_ui"
+      }
+    },
+    {
+      "value": "#cadefe",
+      "description": "$interactive-01 highlight",
+      "name": "theme-highlight",
+      "attributes": {
+        "category": "theme",
+        "type": "highlight"
+      }
+    },
+    {
+      "value": "#c4c9d1",
+      "description": "Skeleton state of graphics",
+      "name": "theme-skeleton-01",
+      "attributes": {
+        "category": "theme",
+        "type": "skeleton_01"
+      }
+    },
+    {
+      "value": "#c1c7cd",
+      "description": "Skeleton state of texts",
+      "name": "theme-skeleton-02",
+      "attributes": {
+        "category": "theme",
+        "type": "skeleton_02"
+      }
+    },
+    {
+      "value": "#8949f8",
+      "description": "Visited links",
+      "name": "theme-visited-link",
+      "attributes": {
+        "category": "theme",
+        "type": "visited_link"
+      }
+    },
+    {
       "value": "#f2f4f8",
+      "description": "Disabled fields; Disabled backgrounds; Disabled border",
       "name": "theme-disabled-01",
       "attributes": {
         "category": "theme",
@@ -380,6 +552,7 @@
     },
     {
       "value": "#c1c7cd",
+      "description": "Disabled elements on $disabled-01; Disabled label; Disabled text on $disabled-01; Disabled icons; Disabled border",
       "name": "theme-disabled-02",
       "attributes": {
         "category": "theme",
@@ -388,21 +561,11 @@
     },
     {
       "value": "#878d96",
+      "description": "Disabled text on $disabled-02; Disabled icons on $disabled-02",
       "name": "theme-disabled-03",
       "attributes": {
         "category": "theme",
         "type": "disabled_03"
-      }
-    }
-  ],
-  "breakpoint": [
-    {
-      "value": "2560px",
-      "theme": true,
-      "name": "breakpoint-max",
-      "attributes": {
-        "category": "breakpoint",
-        "type": "max"
       }
     }
   ]

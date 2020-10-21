@@ -2,92 +2,161 @@
   "theme": {
     "ui_background": {
       "value": "{color.white.value}",
+      "valueName": "white",
       "description": "Default page background"
     },
     "interactive_01": {
       "value": "{color.blue.blue-60.value}",
+      "valueName": "blue-60",
       "description": "Primary interactive color; Interactive text; Selected elements; Featured elements"
     },
     "interactive_02": {
       "value": "{color.grey.grey-80.value}",
+      "valueName": "grey-80",
       "description": "Secondary button"
     },
     "interactive_03": {
       "value": "{color.blue.blue-60.value}",
+      "valueName": "blue-60",
       "description": "Tertiary button"
     },
     "interactive_04": {
       "value": "{color.blue.blue-60.value}",
+      "valueName": "blue-60",
       "description": "Selected nav indicator; Active elements"
     },
     "danger": {
-      "value": "{color.red.red-60.value}"
+      "value": "{color.red.red-60.value}",
+      "valueName": "red-60",
+      "description": "Danger button background; 3:1 AA contrast"
     },
     "ui_01": {
-      "value": "{color.grey.grey-10.value}"
+      "value": "{color.grey.grey-10.value}",
+      "valueName": "grey-60",
+      "description": "Container background on $ui-background; Secondary page background"
     },
     "ui_02": {
-      "value": "{color.white.value}"
+      "value": "{color.white.value}",
+      "valueName": "white",
+      "description": "Container background on $ui-01; `Light` variant background"
     },
     "ui_03": {
-      "value": "{color.grey.grey-20.value}"
+      "value": "{color.grey.grey-20.value}",
+      "valueName": "grey-20",
+      "description": "Subtle border; Tertiary background"
     },
     "ui_04": {
-      "value": "{color.grey.grey-50.value}"
+      "value": "{color.grey.grey-50.value}",
+      "valueName": "grey-50",
+      "description": "3:1 aa element contrast; Medium contrast border"
     },
     "ui_05": {
-      "value": "{color.grey.grey-100.value}"
+      "value": "{color.grey.grey-100.value}",
+      "description": "4.5:1 aa element contrast; High contrast border; Emphasis elements"
     },
     "button_separator": {
-      "value": "{color.grey.grey-20.value}"
+      "value": "{color.grey.grey-20.value}",
+      "description": "3:1 aa element contrast; Fluid button separator"
     },
     "decorative_01": {
-      "value": "{color.grey.grey-20.value}"
+      "value": "{color.grey.grey-20.value}",
+      "description": "“Light” variant elements"
     },
     "text_01": {
-      "value": "{color.grey.grey-100.value}"
+      "value": "{color.grey.grey-100.value}",
+      "description": "Primary text; Body copy; Headers; Hover text color for $text-02"
     },
     "text_02": {
-      "value": "{color.grey.grey-70.value}"
+      "value": "{color.grey.grey-70.value}",
+      "description": "Secondary text; Input labels"
     },
     "text_03": {
-      "value": "{color.grey.grey-40.value}"
+      "value": "{color.grey.grey-40.value}",
+      "description": "Placeholder text"
     },
     "text_04": {
-      "value": "{color.white.value}"
+      "value": "{color.white.value}",
+      "description": "Text on interactive colors"
     },
     "text_05": {
-      "value": "{color.grey.grey-60.value}"
+      "value": "{color.grey.grey-60.value}",
+      "description": "Tertiary text; Help text"
     },
     "text_error": {
-      "value": "{color.red.red-60.value}"
+      "value": "{color.red.red-60.value}",
+      "description": "Error message text"
     },
     "link_01": {
-      "value": "{color.blue.blue-60.value}"
+      "value": "{color.blue.blue-60.value}",
+      "description": "Primary links; Ghost button"
     },
     "inverse_link": {
-      "value": "{color.blue.blue-40.value}"
+      "value": "{color.blue.blue-40.value}",
+      "description": "Links on $inverse-02 backgrounds"
     },
     "icon_01": {
-      "value": "{color.grey.grey-100.value}"
+      "value": "{color.grey.grey-100.value}",
+      "description": "Primary icons"
     },
     "icon_02": {
-      "value": "{color.grey.grey-70.value}"
+      "value": "{color.grey.grey-70.value}",
+      "description": "Secondary icons"
     },
     "icon_03": {
-      "value": "{color.white.value}"
+      "value": "{color.white.value}",
+      "description": "Icons on interactive colors; Icons on non-ui colors"
     },
     "field_01": {
-      "value": "{color.grey.grey-10.value}"
+      "value": "{color.grey.grey-10.value}",
+      "description": "Default input fields; Fields on $ui-backgrounds"
     },
     "field_02": {
-      "value": "{color.white.value}"
+      "value": "{color.white.value}",
+      "description": "“Light” variant input fields; Fields on $ui-01 backgrounds"
     },
     "inverse_01": {
-      "value": "{color.white.value}"
+      "value": "{color.white.value}",
+      "description": "Inverse text color; Inverse icon color"
     },
     "inverse_02": {
-      "value": "{color.grey.grey-80.value}"
+      "value": "{color.grey.grey-80.value}",
+      "description": "High contrast backgrounds; High contrast elements"
+    },
+    "support_01": {
+      "value": "{color.red.red-60.value}",
+      "description": "Error"
+    },
+    "support_02": {
+      "value": "{color.green.green-50.value}",
+      "description": "Success"
+    },
+    "support_03": {
+      "value": "{color.yellow.yellow-50.value}",
+      "description": "Warning"
+    },
+    "support_04": {
+      "value": "{color.blue.blue-70.value}",
+      "description": "Information"
+    },
+    "inverse_support_01": {
+      "value": "{color.red.red-50.value}",
+      "description": "Danger in high contrast moments"
+    },
+    "inverse_support_02": {
+      "value": "{color.green.green-40.value}",
+      "description": "Success in high contrast moments"
+    },
+    "inverse_support_03": {
+      "value": "{color.yellow.yellow-40.value}",
+      "description": "Warning in high contrast moments"
+    },
+    "inverse_support_04": {
+      "value": "{color.blue.blue-50.value}",
+      "description": "Information in high contrast moments"
+    },
+    "overlay_01": {
+      "value": "{color.grey.grey-100.value}",
+      "description": "Background overlay"
     }
   }
 }

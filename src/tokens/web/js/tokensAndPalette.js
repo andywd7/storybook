@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 15 Oct 2020 22:09:39 GMT
+ * Generated on Sun, 18 Oct 2020 16:04:50 GMT
  */
 
 export const BORDER_RADIUS_01 = "2px";
@@ -102,8 +102,8 @@ export const GREY_HOVER_70 = "#5a6066";
 export const GREY_HOVER_80 = "#464c51";
 export const GREY_HOVER_90 = "#2f353a";
 export const GREY_HOVER_100 = "#272c30";
-export const COLOR_WHITE = "#ffffff";
-export const COLOR_BLACK = "#000000";
+export const WHITE = "#ffffff";
+export const BLACK = "#000000";
 export const MAGENTA_10 = "#fff0f7";
 export const MAGENTA_20 = "#fed7e8";
 export const MAGENTA_30 = "#fdb0d2";

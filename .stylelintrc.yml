@@ -4,9 +4,9 @@ plugins:
   - 'stylelint-scss'
   - 'stylelint-order'
 ignoreFiles:
-  - './src/assets/**'
+  - './src/tokens/**'
   - './tests/**'
-  # - './dist/**'
+  - '.storybook/**'
 rules:
   # Disallow "@extend" in scss.
   # http://csswizardry.com/2016/02/mixins-better-for-performance/

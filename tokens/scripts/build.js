@@ -12,23 +12,11 @@ StyleDictionary.registerTransform({
   transformer: function(prop) {
     return prop.name.replace(
       new RegExp(
-        prop.attributes.category + "(_|-)" + prop.attributes.type + "(_|-)",
+        prop.attributes.type === "black" || prop.attributes.type === "white"
+          ? prop.attributes.category + "(_|-)"
+          : prop.attributes.category + "(_|-)" + prop.attributes.type + "(_|-)",
         "gi"
       ),
-      ""
-    )
-  }
-})
-
-StyleDictionary.registerTransform({
-  name: "name/theme",
-  type: "name",
-  matcher: function(prop) {
-    return prop.path[1] === "theme"
-  },
-  transformer: function(prop) {
-    return prop.name.replace(
-      new RegExp(prop.attributes.category + "(_|-)", "gi"),
       ""
     )
   }
@@ -37,21 +25,14 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerFilter({
   name: "isColor",
   matcher: function(prop) {
-    return prop.attributes.category === "color" && !prop.theme
+    return prop.attributes.category === "color" && prop.path[0] !== "theme"
   }
 })
 
 StyleDictionary.registerFilter({
   name: "isToken",
   matcher: function(prop) {
-    return prop.attributes.category !== "color" && !prop.theme
-  }
-})
-
-StyleDictionary.registerFilter({
-  name: "isTheme",
-  matcher: function(prop) {
-    return prop.path[0] === "theme"
+    return prop.path[0] !== "color" && prop.path[0] !== "theme"
   }
 })
 
@@ -69,7 +50,6 @@ StyleDictionary.registerTransformGroup({
     "attribute/cti",
     "name/cti/kebab",
     "name/color",
-    "name/theme",
     "time/seconds",
     "size/px",
     "color/css"
@@ -82,7 +62,6 @@ StyleDictionary.registerTransformGroup({
     "attribute/cti",
     "name/cti/constant",
     "name/color",
-    "name/theme",
     "size/px",
     "color/hex"
   ]
@@ -94,7 +73,6 @@ StyleDictionary.registerTransformGroup({
     "attribute/cti",
     "name/cti/kebab",
     "name/color",
-    "name/theme",
     "size/px",
     "color/hex"
   ]
