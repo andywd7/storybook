@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 18 Oct 2020 16:04:50 GMT
+ * Generated on Fri, 23 Oct 2020 23:06:15 GMT
  */
 
 export const BORDER_RADIUS_01 = "2px";
@@ -28,7 +28,7 @@ export const FONT_SIZE_05 = "28px";
 export const FONT_SIZE_06 = "32px";
 export const FONT_SIZE_07 = "42px";
 export const FONT_SIZE_08 = "54px";
-export const FONT_FAMILY_BODY = "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif";
+export const FONT_FAMILY_SANS_SERIF = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif";
 export const FONT_FAMILY_MONOSPACE = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
 export const FONT_WEIGHT_LIGHT = "300";
 export const FONT_WEIGHT_NORMAL = "400";

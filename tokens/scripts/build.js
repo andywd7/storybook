@@ -141,6 +141,17 @@ StyleDictionary.extend({
         }
       ]
     },
+    "web/tokensAndPalette-css": {
+      transformGroup: "tokens-scss",
+      buildPath: `src/tokens/web/`,
+      files: [
+        {
+          destination: `tokensAndPalette.css`,
+          format: "css/variables",
+          filter: "isNotTheme"
+        }
+      ]
+    },
     "web/tokensAndPalette-js": {
       transformGroup: "tokens-js",
       buildPath: `src/tokens/web/js/`,

@@ -16,7 +16,7 @@ export const tokensBoxShadow = Object.values(docTokens.boxShadow).map((t, i) => 
     <tr key={i}>
       <td><Var>{"$" + t.name}</Var></td>
       <td>{t.value}</td>
-      <td><Tile value={helpers.removePX(SPACING_08)} color={WHITE} square style={{ boxShadow: t.value }} /></td>
+      <td><Tile value={helpers.removePx(SPACING_08)} color={WHITE} square style={{ boxShadow: t.value }} /></td>
     </tr>
   )
 })

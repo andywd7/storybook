@@ -155,6 +155,19 @@ StyleDictionary.extend({
         }
       ]
     },
+    "web/theme-css": {
+      transformGroup: "tokens-scss",
+      // buildPath: `public/tokens/themes/${platform}_${brand}/`,
+      buildPath: `static/`,
+      files: [
+        {
+          // destination: `${brand}.css`,
+          destination: `theme.css`,
+          format: "css/variables",
+          filter: "isTheme"
+        }
+      ]
+    },
     "web/theme-js": {
       transformGroup: "tokens-js",
       // buildPath: `public/tokens/themes/${platform}_${brand}/`,

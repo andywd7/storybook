@@ -13,7 +13,8 @@ Playground1.args = {
 Playground1.parameters = {
   controls: {
     disable: false
-  }
+  },
+  jest: ["Button"]
 }
 
 export const Standard1 = Template.bind()

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 17 Oct 2020 17:42:29 GMT
+ * Generated on Fri, 23 Oct 2020 23:32:01 GMT
  */
 
 export const THEME_UI_BACKGROUND = "#fff";
@@ -65,3 +65,6 @@ export const THEME_VISITED_LINK = "#8949f8";
 export const THEME_DISABLED_01 = "#f2f4f8";
 export const THEME_DISABLED_02 = "#c1c7cd";
 export const THEME_DISABLED_03 = "#878d96";
+export const THEME_FONT_BRAND = "'Roboto'";
+export const THEME_FONT_FAMILY_BODY = "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif";
+export const THEME_FONT_FAMILY_CODE = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";

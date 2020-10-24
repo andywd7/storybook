@@ -6,23 +6,21 @@ import {
   Canvas,
   ArgsTable 
 } from '@storybook/addon-docs/blocks'
-import { Tile, Var } from "@dan-nz/storybook-documentation-primitives"
+import { Var } from "@dan-nz/storybook-documentation-primitives"
 import docTokens from "../../tokens/docs"
-import { PURPLE_50 } from "../../tokens/web/js/tokensAndPalette"
 import * as helpers from "../story-helpers"
 
-export const tokensSpace = Object.values(docTokens.spacing).map((t, i) => {
+export const tokensFontWeight = Object.values(docTokens.fontWeight).map((t, i) => {
   return (
     <tr key={i}>
       <td><Var>{"$" + t.name}</Var></td>
       <td>{t.value}</td>
-      <td>{helpers.rems(t.value)}</td>
-      <td><Tile value={helpers.removePx(t.value)} color={PURPLE_50} square /></td>
+      <td><span style={{ fontWeight: t.value }}>{t.name}</span></td>
     </tr>
   )
 })
 
-<Meta title='TOKENS/Spacing' parameters={{ previewTabs: { canvas: { hidden: true } } }} />
+<Meta title='TOKENS/Font weight' parameters={{ previewTabs: { canvas: { hidden: true } } }} />
 
 <Title />
 
@@ -32,10 +30,9 @@ export const tokensSpace = Object.values(docTokens.spacing).map((t, i) => {
   <thead className="thead-dark">
     <tr>
         <th>Token</th>
-        <th>px</th>
-        <th>rem</th>
+        <th>Value</th>
         <th>Example</th>
     </tr>
   </thead>
-  <tbody>{tokensSpace}</tbody>
+  <tbody>{tokensFontWeight}</tbody>
 </table>

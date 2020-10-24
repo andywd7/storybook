@@ -8,7 +8,8 @@ module.exports = {
     "@storybook/addon-cssresources",
     "@storybook/addon-essentials",
     "@storybook/addon-links",
-    "storybook-addon-designs"
+    "storybook-addon-designs",
+    "@storybook/addon-jest"
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'

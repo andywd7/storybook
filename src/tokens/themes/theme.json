@@ -567,6 +567,32 @@
         "category": "theme",
         "type": "disabled_03"
       }
+    },
+    {
+      "value": "'Roboto'",
+      "name": "theme-font-brand",
+      "attributes": {
+        "category": "theme",
+        "type": "fontBrand"
+      }
+    },
+    {
+      "value": "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+      "description": "-",
+      "name": "theme-font-family-body",
+      "attributes": {
+        "category": "theme",
+        "type": "font_family_body"
+      }
+    },
+    {
+      "value": "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      "description": "-",
+      "name": "theme-font-family-code",
+      "attributes": {
+        "category": "theme",
+        "type": "font_family_code"
+      }
     }
   ]
 }

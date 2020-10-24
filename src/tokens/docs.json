@@ -141,12 +141,12 @@
       }
     }
   ],
-  "font-size": [
+  "fontSize": [
     {
       "value": "12px",
       "name": "font-size-01",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "01"
       }
     },
@@ -154,7 +154,7 @@
       "value": "14px",
       "name": "font-size-02",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "02"
       }
     },
@@ -162,7 +162,7 @@
       "value": "16px",
       "name": "font-size-03",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "03"
       }
     },
@@ -170,7 +170,7 @@
       "value": "20px",
       "name": "font-size-04",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "04"
       }
     },
@@ -178,7 +178,7 @@
       "value": "28px",
       "name": "font-size-05",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "05"
       }
     },
@@ -186,7 +186,7 @@
       "value": "32px",
       "name": "font-size-06",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "06"
       }
     },
@@ -194,7 +194,7 @@
       "value": "42px",
       "name": "font-size-07",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "07"
       }
     },
@@ -202,35 +202,35 @@
       "value": "54px",
       "name": "font-size-08",
       "attributes": {
-        "category": "font-size",
+        "category": "fontSize",
         "type": "08"
       }
     }
   ],
-  "font-family": [
+  "fontFamily": [
     {
-      "value": "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
-      "name": "font-family-body",
+      "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+      "name": "font-family-sans-serif",
       "attributes": {
-        "category": "font-family",
-        "type": "body"
+        "category": "fontFamily",
+        "type": "sans-serif"
       }
     },
     {
       "value": "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
       "name": "font-family-monospace",
       "attributes": {
-        "category": "font-family",
+        "category": "fontFamily",
         "type": "monospace"
       }
     }
   ],
-  "font-weight": [
+  "fontWeight": [
     {
       "value": "300",
       "name": "font-weight-light",
       "attributes": {
-        "category": "font-weight",
+        "category": "fontWeight",
         "type": "light"
       }
     },
@@ -238,7 +238,7 @@
       "value": "400",
       "name": "font-weight-normal",
       "attributes": {
-        "category": "font-weight",
+        "category": "fontWeight",
         "type": "normal"
       }
     },
@@ -246,7 +246,7 @@
       "value": "700",
       "name": "font-weight-bold",
       "attributes": {
-        "category": "font-weight",
+        "category": "fontWeight",
         "type": "bold"
       }
     }

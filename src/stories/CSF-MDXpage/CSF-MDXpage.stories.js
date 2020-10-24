@@ -9,6 +9,8 @@ import {
 // import VUE from "!!raw-loader!./Button.vue"
 // import CSS from "!!raw-loader!./button.css"
 
+// WithTests.parameters = { jest: "addon-jest" }
+
 export default {
   title: "TYPES/CSF-MDXpage",
   component: IiButton,
@@ -61,7 +63,8 @@ export const Playground = Template.bind()
 Playground.parameters = {
   controls: {
     disable: false
-  }
+  },
+  jest: ["Button"]
 }
 
 export const Standard = Template.bind()

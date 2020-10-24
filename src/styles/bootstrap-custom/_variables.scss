@@ -263,9 +263,9 @@ $border-radius-rounded: 50rem !default;
 // // Font, line-height, and color for body text, headings, and more.
 
 // // stylelint-disable value-keyword-case
-$font-family-sans-serif: $font-family-body;
+// $font-family-sans-serif: $font-family-sans-serif;
 // $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base: $font-family-sans-serif;
+$font-family-base: $theme-font-family-body;
 // // stylelint-enable value-keyword-case
 
 $font-size-base: ii-rem(

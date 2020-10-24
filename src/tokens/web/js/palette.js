@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 18 Oct 2020 16:04:50 GMT
+ * Generated on Fri, 23 Oct 2020 23:06:15 GMT
  */
 
 export const BLUE_10 = "#ebf4ff";
