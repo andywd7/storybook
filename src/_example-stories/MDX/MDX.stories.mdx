@@ -12,6 +12,9 @@ import {
   variantOptions
 } from "../../components/store"
 import IiButton from "../../components/Button/Button.vue"
+import IiIcon from "../../components/Icon/Icon.vue"
+// Instead of importing the ListItem, we import its stories
+import { Template1 } from '../Icon.stories.mdx';
 import Usage from './Usage.mdx'
 import Code from './Code.mdx'
 import Style from './Style.mdx'
@@ -20,6 +23,7 @@ import A11y from './A11y.mdx'
 <Meta
   title='TYPES/MDX'
   component={IiButton}
+  subcomponents={{IiIcon}}
   argTypes={{
     size: {
       control: {
@@ -58,6 +62,12 @@ export const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { IiButton },
   template: `<ii-button v-bind="$props">{{ this.default }}</ii-button>`
+})
+
+export const Icon = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { IiButton, IiIcon },
+  template: `<ii-button v-bind="$props"><ii-icon icon="search">{{ this.default }}</ii-icon></ii-button>`
 })
 
 <Canvas>
@@ -125,6 +135,14 @@ export const Template = (args, { argTypes }) => ({
     }}
   >
     {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Icon"
+  >
+    {Template1.bind()}
   </Story>
 </Canvas>
 

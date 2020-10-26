@@ -1,4 +1,5 @@
 import IiButton from "../../components/Button/Button.vue"
+import IiIcon from "../../components/Icon/Icon.vue"
 import {
   sizeOptions,
   typeOptions,
@@ -8,6 +9,7 @@ import {
 export default {
   title: "TYPES/JS",
   component: IiButton,
+  subcomponents: { IiIcon },
   parameters: {
     controls: {
       disable: true
@@ -47,6 +49,12 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { IiButton },
   template: `<ii-button v-bind="$props">{{ this.default }}</ii-button>`
+})
+
+export const SubStory = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { IiButton },
+  template: `<ii-button v-bind="$props"><ii-icon icon="search">{{ this.default }}</ii-icon></ii-button>`
 })
 
 export const Playground3 = Template.bind()
