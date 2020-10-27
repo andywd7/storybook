@@ -22,7 +22,7 @@ export const tokensTheme = Object.values(themeDark.theme).map((t, i) => {
     <tr key={i}>
       <td><Var>{"$" + t.name}</Var></td>
       <td>{t.description}</td>
-      <td width="200">
+      <td>
         <div className="token-value">
           <div>
             {t.valueName}
@@ -44,29 +44,13 @@ export const tokensTheme = Object.values(themeDark.theme).map((t, i) => {
 
 <Subtitle>Tokens subtitle</Subtitle>
 
-<TabsState initial="core">
-  <div id="core" title="Core">
-    <table className="table">
-      <thead className="thead-dark">
-        <tr>
-            <th width="120">Token</th>
-            <th>Role</th>
-            <th width="120">Value</th>
-        </tr>
-      </thead>
-      <tbody>{tokensTheme}</tbody>
-    </table>   
-  </div>
-  <div id="interactive" title="Interactive">
-    <table className="table">
-      <thead className="thead-dark">
-        <tr>
-            <th width="120">Token</th>
-            <th>Role</th>
-            <th width="120">Value</th>
-        </tr>
-      </thead>
-      <tbody>{tokensTheme}</tbody>
-    </table>
-  </div>
-</TabsState>
+<table className="table">
+  <thead className="thead-dark">
+    <tr>
+        <th width="120">Token</th>
+        <th>Role</th>
+        <th width="120">Value</th>
+    </tr>
+  </thead>
+  <tbody>{tokensTheme}</tbody>
+</table>

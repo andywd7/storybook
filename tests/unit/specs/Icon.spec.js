@@ -1,16 +1,16 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
-import NtIcon from '../../../src/components/NtIcon/NtIcon.vue'
+import { shallowMount, createLocalVue } from "@vue/test-utils"
+import NtIcon from "../../../src/components/Icon/Icon.vue"
 
 const localVue = createLocalVue()
 
-describe('NtIcon.vue', () => {
+describe("Icon.vue", () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallowMount(NtIcon, {
       localVue,
       propsData: {
-        icon: 'search'
+        icon: "search"
       }
     })
   })
