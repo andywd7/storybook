@@ -1,23 +1,25 @@
 <template>
-  <table class="table">
+  <table class="ids-table">
     <thead>
       <tr>
         <th>-</th>
-        <th v-for="(v, k) in textColor" :key="k">
-          {{ v.name }}
+        <th v-for="(v, k) in txtColor" :key="k">
+          {{ formatValue(v.name) }}
           <br />
           {{ v.value }}
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(val, key) in backgroudColor" :key="key">
+      <tr v-for="(val, key) in bgColor" :key="key">
         <td>
-          {{ val.name }}
-          <br />
-          {{ val.value }}
+          <div class="ids-swatch ids-swatch--empty">
+            {{ formatValue(val.name) }}
+            <br />
+            {{ val.value }}
+          </div>
         </td>
-        <td v-for="(v, k) in textColor" :key="k">
+        <td v-for="(v, k) in txtColor" :key="k">
           <div
             v-if="isAccessible(v.value, val.value)"
             :class="val.attributes.item"
@@ -36,7 +38,11 @@
               <span>{{ ratio(val.value, v.value) }}</span>
             </div>
           </div>
-          <div v-else>NA</div>
+          <div v-else>
+            <div class="ids-swatch ids-swatch--empty">
+              NA
+            </div>
+          </div>
         </td>
       </tr>
     </tbody>
@@ -45,45 +51,52 @@
 
 <script>
 import { store } from "../../components/store"
+import snakeCase from "lodash/snakeCase"
 const contrast = require("get-contrast")
 export default {
   name: "ColorA11y",
   props: {
-    txtColor: {
-      type: String,
-      default: "cyan"
-    },
-    bgColor: {
+    backgroundColor: {
       type: String,
       default: "blue"
     },
-    view: {
+    contrast: {
       type: String,
-      default: "AA"
+      default: "Passed"
+    },
+    format: {
+      type: String,
+      default: "SCSS"
+    },
+    textColor: {
+      type: String,
+      default: "grey"
     }
   },
   data() {
     return {
-      tokens: store.state.tokens.color
+      tokens: store.tokens.color
     }
   },
   computed: {
-    textColor() {
-      return this.tokens.filter(col => col.attributes.type === this.txtColor)
+    txtColor() {
+      return this.tokens.filter(col => col.attributes.type === this.textColor)
     },
-    backgroudColor() {
-      return this.tokens.filter(col => col.attributes.type === this.bgColor)
+    bgColor() {
+      return this.tokens.filter(
+        col => col.attributes.type === this.backgroundColor
+      )
     }
   },
   methods: {
     isAccessible(bg, txt) {
-      if (this.view === "Passed") {
+      if (this.contrast === "Passed") {
         return contrast.isAccessible(bg, txt)
-      } else if (this.view === "Failed") {
+      } else if (this.contrast === "Failed") {
         return !contrast.isAccessible(bg, txt)
-      } else if (this.view === "AA") {
+      } else if (this.contrast === "AA") {
         return contrast.score(bg, txt) === "AA"
-      } else if (this.view === "AAA") {
+      } else if (this.contrast === "AAA") {
         return contrast.score(bg, txt) === "AAA"
       } else {
         return true
@@ -100,15 +113,30 @@ export default {
     },
     ratio(bg, txt) {
       return contrast.ratio(bg, txt).toFixed(2)
+    },
+    formatValue(v) {
+      return this.format === "SCSS" ? "$" + v : snakeCase(v)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-// .ids-grey-80 {
-//   border: 1px solid $grey-50;
-// }
+.ids-table {
+  width: 100%;
+}
+
+.ids-table thead th {
+  border-bottom: 2px solid #dde1e6;
+  padding: 0.5rem;
+  vertical-align: bottom;
+}
+
+.ids-table th,
+.ids-table td {
+  // border-top: 1px solid #dde1e6;
+  vertical-align: top;
+}
 
 .ids-swatch {
   min-height: 3rem;

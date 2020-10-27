@@ -49,12 +49,20 @@ import IiIcon from '../../components/Icon/Icon'
   }}
 />
 
-export const Template1 = (args, { argTypes }) => ({
+export const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { IiIcon },
   template: `<ii-icon v-bind="$props">{{ this.default }}</ii-icon>`
 })
 
-<Story name="Playground">
-  {Template1.bind()}
+<Story
+  name="Playground"
+  parameters={{
+    controls: {
+      disable: false
+    },
+    jest: ["Icon"]
+  }}
+>
+  {Template.bind()}
 </Story>

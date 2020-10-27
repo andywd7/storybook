@@ -1,15 +1,15 @@
 // import Vue from "vue"
 import tokens from "../tokens/docs"
-import themeDark from "../tokens/themes/theme.json"
+import theme from "../tokens/themes/theme.json"
 
 const colors = [...new Set(tokens.color.map(col => col.attributes.type))]
 
 export const store = {
-  state: {
-    tokens,
-    themeDark,
-    colors: colors
-  }
+  colors: colors,
+  contrast: ["All", "Passed", "Failed", "AA", "AAA"],
+  formats: ["SCSS", "JS"],
+  theme,
+  tokens
 }
 
 export const sizeOptions = {

@@ -6,7 +6,7 @@ import startCase from "lodash/startCase"
 const mixinFormat = Vue.mixin({
   methods: {
     formatValue(v) {
-      const sF = this.$root.selectedFormat
+      const sF = this.store.formats
       return sF === "SCSS" ? "$" + v : snakeCase(v)
     }
   }

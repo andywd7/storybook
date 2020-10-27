@@ -9,8 +9,6 @@ import {
 // import VUE from "!!raw-loader!./Button.vue"
 // import CSS from "!!raw-loader!./button.css"
 
-// WithTests.parameters = { jest: "addon-jest" }
-
 export default {
   title: "Components/Button",
   component: IiButton,
@@ -44,11 +42,11 @@ export default {
     },
     default: {
       control: { type: "text" },
-      defaultValue: "Button",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "null" }
-      }
+      defaultValue: "Button"
+      // table: {
+      //   type: { summary: "string" },
+      //   defaultValue: { summary: "null" }
+      // }
     }
   }
 }

@@ -769,96 +769,6 @@
       }
     },
     {
-      "value": "#e0e4ea",
-      "name": "grey-hover-10",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-10"
-      }
-    },
-    {
-      "value": "#c4c9d1",
-      "name": "grey-hover-20",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-20"
-      }
-    },
-    {
-      "value": "#aaafb7",
-      "name": "grey-hover-30",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-30"
-      }
-    },
-    {
-      "value": "#90979f",
-      "name": "grey-hover-40",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-40"
-      }
-    },
-    {
-      "value": "#747c83",
-      "name": "grey-hover-50",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-50"
-      }
-    },
-    {
-      "value": "#5f656b",
-      "name": "grey-hover-60",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-60"
-      }
-    },
-    {
-      "value": "#5a6066",
-      "name": "grey-hover-70",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-70"
-      }
-    },
-    {
-      "value": "#464c51",
-      "name": "grey-hover-80",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-80"
-      }
-    },
-    {
-      "value": "#2f353a",
-      "name": "grey-hover-90",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-90"
-      }
-    },
-    {
-      "value": "#272c30",
-      "name": "grey-hover-100",
-      "attributes": {
-        "category": "color",
-        "type": "grey",
-        "item": "grey-hover-100"
-      }
-    },
-    {
       "value": "#ffffff",
       "name": "white",
       "attributes": {
@@ -872,6 +782,96 @@
       "attributes": {
         "category": "color",
         "type": "black"
+      }
+    },
+    {
+      "value": "#e0e4ea",
+      "name": "grey-hover-10",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-10"
+      }
+    },
+    {
+      "value": "#c4c9d1",
+      "name": "grey-hover-20",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-20"
+      }
+    },
+    {
+      "value": "#aaafb7",
+      "name": "grey-hover-30",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-30"
+      }
+    },
+    {
+      "value": "#90979f",
+      "name": "grey-hover-40",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-40"
+      }
+    },
+    {
+      "value": "#747c83",
+      "name": "grey-hover-50",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-50"
+      }
+    },
+    {
+      "value": "#5f656b",
+      "name": "grey-hover-60",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-60"
+      }
+    },
+    {
+      "value": "#5a6066",
+      "name": "grey-hover-70",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-70"
+      }
+    },
+    {
+      "value": "#464c51",
+      "name": "grey-hover-80",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-80"
+      }
+    },
+    {
+      "value": "#2f353a",
+      "name": "grey-hover-90",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-90"
+      }
+    },
+    {
+      "value": "#272c30",
+      "name": "grey-hover-100",
+      "attributes": {
+        "category": "color",
+        "type": "grey-hover",
+        "item": "grey-hover-100"
       }
     },
     {

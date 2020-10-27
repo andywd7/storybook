@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 23 Oct 2020 23:06:15 GMT
+ * Generated on Tue, 27 Oct 2020 21:34:16 GMT
  */
 
 export const BORDER_RADIUS_01 = "2px";
@@ -92,18 +92,18 @@ export const GREY_70 = "#4d5358";
 export const GREY_80 = "#343a3f";
 export const GREY_90 = "#21272a";
 export const GREY_100 = "#121619";
-export const GREY_HOVER_10 = "#e0e4ea";
-export const GREY_HOVER_20 = "#c4c9d1";
-export const GREY_HOVER_30 = "#aaafb7";
-export const GREY_HOVER_40 = "#90979f";
-export const GREY_HOVER_50 = "#747c83";
-export const GREY_HOVER_60 = "#5f656b";
-export const GREY_HOVER_70 = "#5a6066";
-export const GREY_HOVER_80 = "#464c51";
-export const GREY_HOVER_90 = "#2f353a";
-export const GREY_HOVER_100 = "#272c30";
 export const WHITE = "#ffffff";
 export const BLACK = "#000000";
+export const COLOR_GREY_HOVER_GREY_HOVER_10 = "#e0e4ea";
+export const COLOR_GREY_HOVER_GREY_HOVER_20 = "#c4c9d1";
+export const COLOR_GREY_HOVER_GREY_HOVER_30 = "#aaafb7";
+export const COLOR_GREY_HOVER_GREY_HOVER_40 = "#90979f";
+export const COLOR_GREY_HOVER_GREY_HOVER_50 = "#747c83";
+export const COLOR_GREY_HOVER_GREY_HOVER_60 = "#5f656b";
+export const COLOR_GREY_HOVER_GREY_HOVER_70 = "#5a6066";
+export const COLOR_GREY_HOVER_GREY_HOVER_80 = "#464c51";
+export const COLOR_GREY_HOVER_GREY_HOVER_90 = "#2f353a";
+export const COLOR_GREY_HOVER_GREY_HOVER_100 = "#272c30";
 export const MAGENTA_10 = "#fff0f7";
 export const MAGENTA_20 = "#fed7e8";
 export const MAGENTA_30 = "#fdb0d2";

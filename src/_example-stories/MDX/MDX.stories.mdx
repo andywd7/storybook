@@ -11,10 +11,9 @@ import {
   typeOptions,
   variantOptions
 } from "../../components/store"
-import IiButton from "../../components/Button/Button.vue"
-import IiIcon from "../../components/Icon/Icon.vue"
-// Instead of importing the ListItem, we import its stories
-import { Template1 } from '../Icon.stories.mdx';
+import IiButton from "../../components/Button/Button"
+import IiIcon from "../../components/Icon/Icon"
+import { Icon } from '../Icon.stories.mdx';
 import Usage from './Usage.mdx'
 import Code from './Code.mdx'
 import Style from './Style.mdx'
@@ -45,11 +44,7 @@ import A11y from './A11y.mdx'
     },
     default: {
       control: { type: "text" },
-      defaultValue: "Button",
-      table: {
-        type: { summary: "string" },
-        defaultValue: { summary: "null" }
-      }
+      defaultValue: "Button"
     }
   }}
 />
@@ -142,7 +137,7 @@ export const Icon = (args, { argTypes }) => ({
   <Story
     name="Icon"
   >
-    {Template1.bind()}
+    {Icon.bind()}
   </Story>
 </Canvas>
 

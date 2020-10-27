@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 23 Oct 2020 23:32:01 GMT
+ * Generated on Tue, 27 Oct 2020 21:34:21 GMT
  */
 
 :root {
@@ -54,18 +54,18 @@
   --theme-hover-row: #e0e4ea;
   --theme-inverse-hover-ui: #464c51;
   --theme-active-primary: #022b8f;
-  --theme-active-secondary: #697077;
+  --theme-active-secondary: #5f656b;
   --theme-active-tertiary: #022b8f;
-  --theme-active-ui: #c1c7cd;
+  --theme-active-ui: #aaafb7;
   --theme-active-danger: #741017;
-  --theme-selected-ui: #dde1e6;
+  --theme-selected-ui: #c4c9d1;
   --theme-highlight: #cadefe;
   --theme-skeleton-01: #c4c9d1;
-  --theme-skeleton-02: #c1c7cd;
+  --theme-skeleton-02: #aaafb7;
   --theme-visited-link: #8949f8;
-  --theme-disabled-01: #f2f4f8;
-  --theme-disabled-02: #c1c7cd;
-  --theme-disabled-03: #878d96;
+  --theme-disabled-01: #e0e4ea;
+  --theme-disabled-02: #aaafb7;
+  --theme-disabled-03: #747c83;
   --theme-font-brand: 'Roboto';
   --theme-font-family-body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   --theme-font-family-code: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;

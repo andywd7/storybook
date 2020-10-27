@@ -461,7 +461,7 @@
       }
     },
     {
-      "value": "#697077",
+      "value": "#5f656b",
       "description": "$interactive-02 active; $inverse-01 active",
       "name": "theme-active-secondary",
       "attributes": {
@@ -479,7 +479,7 @@
       }
     },
     {
-      "value": "#c1c7cd",
+      "value": "#aaafb7",
       "description": "$ui-01 active; $ui-02 active",
       "name": "theme-active-ui",
       "attributes": {
@@ -497,7 +497,7 @@
       }
     },
     {
-      "value": "#dde1e6",
+      "value": "#c4c9d1",
       "description": "Selected UI elements",
       "name": "theme-selected-ui",
       "attributes": {
@@ -524,7 +524,7 @@
       }
     },
     {
-      "value": "#c1c7cd",
+      "value": "#aaafb7",
       "description": "Skeleton state of texts",
       "name": "theme-skeleton-02",
       "attributes": {
@@ -542,7 +542,7 @@
       }
     },
     {
-      "value": "#f2f4f8",
+      "value": "#e0e4ea",
       "description": "Disabled fields; Disabled backgrounds; Disabled border",
       "name": "theme-disabled-01",
       "attributes": {
@@ -551,7 +551,7 @@
       }
     },
     {
-      "value": "#c1c7cd",
+      "value": "#aaafb7",
       "description": "Disabled elements on $disabled-01; Disabled label; Disabled text on $disabled-01; Disabled icons; Disabled border",
       "name": "theme-disabled-02",
       "attributes": {
@@ -560,7 +560,7 @@
       }
     },
     {
-      "value": "#878d96",
+      "value": "#747c83",
       "description": "Disabled text on $disabled-02; Disabled icons on $disabled-02",
       "name": "theme-disabled-03",
       "attributes": {

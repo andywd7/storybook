@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 23 Oct 2020 23:32:01 GMT
+ * Generated on Tue, 27 Oct 2020 21:34:21 GMT
  */
 
 export const THEME_UI_BACKGROUND = "#fff";
@@ -53,18 +53,18 @@ export const THEME_HOVER_DANGER = "#d8222f";
 export const THEME_HOVER_ROW = "#e0e4ea";
 export const THEME_INVERSE_HOVER_UI = "#464c51";
 export const THEME_ACTIVE_PRIMARY = "#022b8f";
-export const THEME_ACTIVE_SECONDARY = "#697077";
+export const THEME_ACTIVE_SECONDARY = "#5f656b";
 export const THEME_ACTIVE_TERTIARY = "#022b8f";
-export const THEME_ACTIVE_UI = "#c1c7cd";
+export const THEME_ACTIVE_UI = "#aaafb7";
 export const THEME_ACTIVE_DANGER = "#741017";
-export const THEME_SELECTED_UI = "#dde1e6";
+export const THEME_SELECTED_UI = "#c4c9d1";
 export const THEME_HIGHLIGHT = "#cadefe";
 export const THEME_SKELETON_01 = "#c4c9d1";
-export const THEME_SKELETON_02 = "#c1c7cd";
+export const THEME_SKELETON_02 = "#aaafb7";
 export const THEME_VISITED_LINK = "#8949f8";
-export const THEME_DISABLED_01 = "#f2f4f8";
-export const THEME_DISABLED_02 = "#c1c7cd";
-export const THEME_DISABLED_03 = "#878d96";
+export const THEME_DISABLED_01 = "#e0e4ea";
+export const THEME_DISABLED_02 = "#aaafb7";
+export const THEME_DISABLED_03 = "#747c83";
 export const THEME_FONT_BRAND = "'Roboto'";
 export const THEME_FONT_FAMILY_BODY = "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif";
 export const THEME_FONT_FAMILY_CODE = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
