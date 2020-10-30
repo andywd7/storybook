@@ -11,35 +11,54 @@ import groupBy from "lodash/groupBy"
 import { store } from "../../components/store"
 import { SPACING_08 } from "../../tokens/web/js/tokensAndPalette"
 
-export const typeData = () => {
-  return t.attributes.category === "color"
-    ? groupBy(t.attributes.type, "attributes.type")
-    : t.attributes.type
-}
+export const colors = store.tokens.color.filter((item) => item.attributes.item)
+export const backWhite = store.tokens.color.filter((item) => !item.attributes.item)
 
-export const tokensColors = Object.values(store.tokens.color).map((t, i) => {
+export const ccc = () => groupBy(colors, "attributes.type")
+
+export const tokensColors = Object.values(ccc()).map((t, i) => {
+  // console.log(t[i].value)
   const styles = {
-    backgroundColor: t.value,
+    // backgroundColor: t[2].value,
     borderRadius: SPACING_08,
     height: SPACING_08,
     width: SPACING_08
   }
   return (
-    <tr key={i}>
-      <td><Var>{"$" + t.name}</Var></td>
-      <td>
-        <div className="token-value">
-          <div>
-            {t.valueName}
-            <br/>
-            -
-            <br/>
-            <Var>{t.value}</Var>
-          </div>
-          <div style={styles} />
-        </div>
-      </td>
-    </tr>
+    <div key={i}>
+      <h3>{t[0].attributes.type.toString()}</h3>
+      <table className="table">
+        <thead className="thead-dark">
+          <tr>
+              <th width="120">Token</th>
+              <th width="120">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            Object.values(t).map((val, index) => {
+              return (
+                <tr key={index}>
+                  <td><Var>{"$" + val.name}</Var></td>
+                  <td>
+                    <div className="token-value">
+                      <div>
+                        {val.name}
+                        <br/>
+                        -
+                        <br/>
+                        <Var>{val.value}</Var>
+                      </div>
+                      <div style={styles} style={{backgroundColor: val.value}} />
+                    </div>
+                  </td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
+      </table>
+    </div>
   )
 })
 
@@ -49,12 +68,4 @@ export const tokensColors = Object.values(store.tokens.color).map((t, i) => {
 
 <Subtitle>Tokens subtitle</Subtitle>
 
-<table className="table">
-  <thead className="thead-dark">
-    <tr>
-        <th width="120">Token</th>
-        <th width="120">Value</th>
-    </tr>
-  </thead>
-  <tbody>{tokensColors}</tbody>
-</table>
+<div>{tokensColors}</div>
