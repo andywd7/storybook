@@ -1,8 +1,8 @@
 // import Vue from "vue"
-import tokens from "../tokens/docs"
+import tokens from "../../tokens-figma/generated/docs"
 import theme from "../tokens/themes/theme.json"
 
-const colors = [...new Set(tokens.color.map(col => col.attributes.type))]
+const colors = [...new Set(tokens.colors.map(col => col.attributes.type))]
 
 export const store = {
   colors: colors,

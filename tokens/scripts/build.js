@@ -84,7 +84,12 @@ StyleDictionary.registerTransformGroup({
 // console.log("\n==============================================");
 
 StyleDictionary.extend({
-  source: ["tokens/**/*.json"],
+  // source: ["tokens/**/*.json"],
+  source: [
+    "tokens/generic/*.json",
+    "tokens/palette/*.json",
+    "tokens/themes/*.json"
+  ],
   platforms: {
     "web/palette-scss": {
       transformGroup: "tokens-scss",

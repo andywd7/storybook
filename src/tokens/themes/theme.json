@@ -129,7 +129,7 @@
     },
     {
       "value": "#121619",
-      "description": "Primary text; Body copy; Headers; Hover text color for $text-02",
+      "description": "Primary text; Body copy; Headers; Hover text color for text-02",
       "name": "theme-text-01",
       "attributes": {
         "category": "theme",

@@ -33,7 +33,7 @@ export const globalTypes = {
 }
 
 const withTheme = (Story, context) => { 
-  console.log(context.globals.theme)
+  // console.log(context.globals.theme)
   // const { the } = context.globals.theme
   return {
     data() {

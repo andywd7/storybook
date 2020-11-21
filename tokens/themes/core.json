@@ -64,7 +64,7 @@
     },
     "text_01": {
       "value": "{color.grey.grey-100.value}",
-      "description": "Primary text; Body copy; Headers; Hover text color for $text-02"
+      "description": "Primary text; Body copy; Headers; Hover text color for text-02"
     },
     "text_02": {
       "value": "{color.grey.grey-70.value}",

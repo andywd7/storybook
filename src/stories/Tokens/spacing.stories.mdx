@@ -7,17 +7,17 @@ import {
   ArgsTable 
 } from '@storybook/addon-docs/blocks'
 import { Tile, Var } from "@dan-nz/storybook-documentation-primitives"
-import docTokens from "../../tokens/docs"
-import { PURPLE_50 } from "../../tokens/web/js/tokensAndPalette"
+import docTokens from "../../../tokens-figma/generated/docs"
+import { purple50 } from "../../../tokens-figma/generated/tokensAndPalette/tokensAndPalette"
 import * as helpers from "../story-helpers"
 
-export const tokensSpace = Object.values(docTokens.spacing).map((t, i) => {
+export const tokensSpacing = Object.values(docTokens.spacing).map((t, i) => {
   return (
     <tr key={i}>
       <td><Var>{"$" + t.name}</Var></td>
       <td>{t.value}</td>
       <td>{helpers.rems(t.value)}</td>
-      <td><Tile value={helpers.removePx(t.value)} color={PURPLE_50} square /></td>
+      <td><Tile value={helpers.removePx(t.value)} color={purple50} square /></td>
     </tr>
   )
 })
@@ -37,5 +37,5 @@ export const tokensSpace = Object.values(docTokens.spacing).map((t, i) => {
         <th>Example</th>
     </tr>
   </thead>
-  <tbody>{tokensSpace}</tbody>
+  <tbody>{tokensSpacing}</tbody>
 </table>

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import colors from "../../tokens/web/js/palette.js"
+import colors from "../../../tokens-figma/generated/palette/palette.js"
 import colorItem from "./ColorItem"
 export default {
   name: "Color",

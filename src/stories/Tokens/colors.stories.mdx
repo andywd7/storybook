@@ -9,20 +9,18 @@ import {
 import { Var } from "@dan-nz/storybook-documentation-primitives"
 import groupBy from "lodash/groupBy"
 import { store } from "../../components/store"
-import { SPACING_08 } from "../../tokens/web/js/tokensAndPalette"
+import { spacing08 } from "../../../tokens-figma/generated/tokensAndPalette/tokensAndPalette"
 
-export const colors = store.tokens.color.filter((item) => item.attributes.item)
-export const backWhite = store.tokens.color.filter((item) => !item.attributes.item)
+export const colors = store.tokens.colors.filter((item) => item.attributes.item)
+export const blackWhite = store.tokens.colors.filter((item) => !item.attributes.item)
 
 export const ccc = () => groupBy(colors, "attributes.type")
 
 export const tokensColors = Object.values(ccc()).map((t, i) => {
-  // console.log(t[i].value)
   const styles = {
-    // backgroundColor: t[2].value,
-    borderRadius: SPACING_08,
-    height: SPACING_08,
-    width: SPACING_08
+    borderRadius: spacing08,
+    height: spacing08,
+    width: spacing08
   }
   return (
     <div key={i}>
@@ -49,7 +47,7 @@ export const tokensColors = Object.values(ccc()).map((t, i) => {
                         <br/>
                         <Var>{val.value}</Var>
                       </div>
-                      <div style={styles} style={{backgroundColor: val.value}} />
+                      <div style={{...styles, backgroundColor: val.value}} />
                     </div>
                   </td>
                 </tr>

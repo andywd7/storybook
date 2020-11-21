@@ -51,7 +51,7 @@
 
 <script>
 import { store } from "../../components/store"
-import snakeCase from "lodash/snakeCase"
+import camelCase from "lodash/camelCase"
 const contrast = require("get-contrast")
 export default {
   name: "ColorA11y",
@@ -75,7 +75,7 @@ export default {
   },
   data() {
     return {
-      tokens: store.tokens.color
+      tokens: store.tokens.colors
     }
   },
   computed: {
@@ -115,7 +115,7 @@ export default {
       return contrast.ratio(bg, txt).toFixed(2)
     },
     formatValue(v) {
-      return this.format === "SCSS" ? "$" + v : snakeCase(v)
+      return this.format === "SCSS" ? "$" + v : camelCase(v)
     }
   }
 }

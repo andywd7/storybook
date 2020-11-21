@@ -1,0 +1,63 @@
+/**
+ * Do not edit directly
+ * Generated on Thu, 19 Nov 2020 17:18:10 GMT
+ */
+
+export const borderRadius01 = "2px";
+export const borderRadius02 = "3px";
+export const borderRadius03 = "6px";
+export const fontSizes01 = "12px";
+export const fontSizes02 = "14px";
+export const fontSizes03 = "16px";
+export const fontSizes04 = "20px";
+export const fontSizes05 = "28px";
+export const fontSizes06 = "32px";
+export const fontSizes07 = "42px";
+export const fontSizes08 = "54px";
+export const fontFamiliesSansSerif = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif";
+export const fontFamiliesMonospace = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
+export const fontFamiliesBrand = "Roboto";
+export const fontFamiliesCode = "'Roboto Mono'";
+export const fontWeightsLight = "300";
+export const fontWeightsNormal = "400";
+export const fontWeightsBold = "700";
+export const lineHeights10 = "64px";
+export const lineHeights01 = "16px";
+export const lineHeights02 = "18px";
+export const lineHeights03 = "20px";
+export const lineHeights04 = "22px";
+export const lineHeights05 = "24px";
+export const lineHeights06 = "26px";
+export const lineHeights07 = "36px";
+export const lineHeights08 = "40px";
+export const lineHeights09 = "50px";
+export const spacingLayout01 = "16px";
+export const spacingLayout02 = "24px";
+export const spacingLayout03 = "32px";
+export const spacingLayout04 = "48px";
+export const spacingLayout05 = "64px";
+export const spacingLayout06 = "96px";
+export const spacingLayout07 = "160px";
+export const spacing01 = "2px";
+export const spacing02 = "4px";
+export const spacing03 = "8px";
+export const spacing04 = "12px";
+export const spacing05 = "16px";
+export const spacing06 = "24px";
+export const spacing07 = "32px";
+export const spacing08 = "40px";
+export const spacing09 = "48px";
+export const boxShadowNone = "none";
+export const boxShadowComponent = "0 1px 1px rgba(0,0,0,.2)";
+export const boxShadowTemporary = "0 1px 3px rgba(0,0,0,.2)";
+export const boxShadowNavigation = "0 2px 4px rgba(0,0,0,0.2)";
+export const boxShadowNotification = "0 4px 8px rgba(0,0,0,0.2)";
+export const boxShadowModal = "0 6px 12px rgba(0,0,0,0.2)";
+export const breakpointXs = "0";
+export const breakpointSm = "320px";
+export const breakpointMd = "672px";
+export const breakpointLg = "1040px";
+export const breakpointXlg = "1328px";
+export const breakpointXxlg = "1568px";
+export const breakpointXxxlg = "1904px";
+export const breakpointMax = "2560px";

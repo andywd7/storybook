@@ -7,10 +7,10 @@ import {
   ArgsTable 
 } from '@storybook/addon-docs/blocks'
 import { Var } from "@dan-nz/storybook-documentation-primitives"
-import docTokens from "../../tokens/docs"
+import docTokens from "../../../tokens-figma/generated/docs"
 import * as helpers from "../story-helpers"
 
-export const tokensFontWeight = Object.values(docTokens.fontWeight).map((t, i) => {
+export const tokensFontWeights = Object.values(docTokens.fontWeights).map((t, i) => {
   return (
     <tr key={i}>
       <td><Var>{"$" + t.name}</Var></td>
@@ -34,5 +34,5 @@ export const tokensFontWeight = Object.values(docTokens.fontWeight).map((t, i) =
         <th>Example</th>
     </tr>
   </thead>
-  <tbody>{tokensFontWeight}</tbody>
+  <tbody>{tokensFontWeights}</tbody>
 </table>

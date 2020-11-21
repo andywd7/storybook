@@ -7,8 +7,8 @@ import {
   ArgsTable 
 } from '@storybook/addon-docs/blocks'
 import { Tile, Var } from "@dan-nz/storybook-documentation-primitives"
-import docTokens from "../../tokens/docs"
-import { SPACING_08, PURPLE_50 } from "../../tokens/web/js/tokensAndPalette"
+import docTokens from "../../../tokens-figma/generated/docs"
+import { spacing08, purple50 } from "../../../tokens-figma/generated/tokensAndPalette/tokensAndPalette"
 import * as helpers from "../story-helpers"
 
 export const tokensBorderRadius = Object.values(docTokens.borderRadius).map((t, i) => {
@@ -16,7 +16,7 @@ export const tokensBorderRadius = Object.values(docTokens.borderRadius).map((t, 
     <tr key={i}>
       <td><Var>{"$" + t.name}</Var></td>
       <td>{t.value}</td>
-      <td><Tile value={helpers.removePx(SPACING_08)} color={PURPLE_50} square style={{ borderRadius: t.value }} /></td>
+      <td><Tile value={helpers.removePx(spacing08)} color={purple50} square style={{ borderRadius: t.value }} /></td>
     </tr>
   )
 })

@@ -1,0 +1,101 @@
+{
+  "typography": {
+    "styles": {
+      "code-01": {
+        "font-family": {
+          "value": "${fontFamilies.code.alias}",
+          "alias": "{fontFamilies.code.value}"
+        },
+        "font-size": {
+          "value": "${fontSizes.01.alias}",
+          "alias": "{fontSizes.01.value}"
+        },
+        "font-weight": {
+          "value": "${fontWeights.normal.alias}",
+          "alias": "{fontWeights.normal.value}"
+        },
+        "line-height": {
+          "value": "${lineHeights.01.alias}",
+          "alias": "{lineHeights.01.value}"
+        },
+        "docs": {
+          "value": "This is for inline code snippets and smaller code elements."
+        }
+      },
+      "code-02": {
+        "font-family": {
+          "value": "${fontFamilies.code.alias}",
+          "alias": "{fontFamilies.code.value}"
+        },
+        "font-size": {
+          "value": "${fontSizes.02.alias}",
+          "alias": "{fontSizes.02.value}"
+        },
+        "font-weight": {
+          "value": "${fontWeights.normal.alias}",
+          "alias": "{fontWeights.normal.value}"
+        },
+        "line-height": {
+          "value": "${lineHeights.03.alias}",
+          "alias": "{lineHeights.03.value}"
+        },
+        "docs": {
+          "value": "This is for large code snippets and larger code elements."
+        }
+      },
+      "label-01": {
+        "font-size": {
+          "value": "${fontSizes.01.alias}",
+          "alias": "{fontSizes.01.value}"
+        },
+        "font-weight": {
+          "value": "${fontWeights.normal.alias}",
+          "alias": "{fontWeights.normal.value}"
+        },
+        "line-height": {
+          "value": "${lineHeights.01.alias}",
+          "alias": "{lineHeights.01.value}"
+        },
+        "docs": {
+          "value": "This is for field labels in components and error messages."
+        }
+      },
+      "caption-01": {
+        "font-size": {
+          "value": "${fontSizes.01.alias}",
+          "alias": "{fontSizes.01.value}"
+        },
+        "font-weight": {
+          "value": "${fontWeights.normal.alias}",
+          "alias": "{fontWeights.normal.value}"
+        },
+        "line-height": {
+          "value": "${lineHeights.01.alias}",
+          "alias": "{lineHeights.01.value}"
+        },
+        "docs": {
+          "value": "This is for explanatory helper text that appears below a field title within a component."
+        }
+      }
+    },
+    "body": {
+      "body-short-01": {
+        "font-size": {
+          "value": "${fontSizes.02.alias}",
+          "alias": "{fontSizes.02.value}"
+        },
+        "font-weight": {
+          "value": "${fontWeights.normal.alias}",
+          "alias": "{fontWeights.normal.value}"
+        },
+        "line-height": {
+          "value": "${lineHeights.02.alias}",
+          "alias": "{lineHeights.02.value}"
+        },
+        "docs": {
+          "value": "This is for short paragraphs with no more than four lines and is commonly used in components."
+        }
+      }
+    }
+  }
+}

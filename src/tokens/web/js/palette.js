@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Tue, 27 Oct 2020 21:34:16 GMT
+ * Generated on Tue, 10 Nov 2020 15:15:31 GMT
  */
 
-export const BLUE_10 = "#ebf4ff";
+export const BLUE_10 = "#040506";
 export const BLUE_20 = "#cadefe";
 export const BLUE_30 = "#9dc2fd";
 export const BLUE_40 = "#78a9ff";

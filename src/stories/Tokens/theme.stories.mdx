@@ -8,15 +8,16 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { TabsState } from "@storybook/components"
 import { Tile, Var } from "@dan-nz/storybook-documentation-primitives"
-import themeDark from "../../tokens/themes/theme.json"
-import { SPACING_08 } from "../../tokens/web/js/tokensAndPalette"
+import theme from "../../tokens/themes/theme.json"
+import { spacing08, grey30, white } from "../../../tokens-figma/generated/tokensAndPalette/tokensAndPalette"
 
-export const tokensTheme = Object.values(themeDark.theme).map((t, i) => {
+export const tokensTheme = Object.values(theme.theme).map((t, i) => {
   const styles = {
     backgroundColor: t.value,
-    borderRadius: SPACING_08,
-    height: SPACING_08,
-    width: SPACING_08
+    border: "1px solid",
+    borderRadius: spacing08,
+    height: spacing08,
+    width: spacing08
   }
   return (
     <tr key={i}>
@@ -31,7 +32,7 @@ export const tokensTheme = Object.values(themeDark.theme).map((t, i) => {
             <br/>
             <Var>{t.value}</Var>
           </div>
-          <div style={styles} />
+          <div style={{ ...styles, borderColor: t.value === white ? grey30 : "transparent" }} />
         </div>
       </td>
     </tr>

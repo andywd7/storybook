@@ -23,7 +23,8 @@ module.exports = StyleDictionary => {
           // if (_.has(current, "mixin")) {
           //   current.mixin = `${current.mixin}`;
           // }
-
+          
+          delete current.category
           delete current.original
           delete current.path
           toRet[newKey].push(current)
